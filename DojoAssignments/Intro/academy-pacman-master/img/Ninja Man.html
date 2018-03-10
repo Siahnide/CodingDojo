@@ -1,0 +1,266 @@
+<html>
+
+<head>
+    <title> NinjaMan</title> 
+    <style type="text/css">
+        * {
+           
+            margin: 0;
+            padding: 0;
+        }
+
+        .wall {
+            background-color: blue;
+            height: 40px;
+            width: 40px;
+            display: inline-block
+            
+        }
+
+        .blank {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+
+        }
+
+        .sushi {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('sushi.png');
+            background-size: contain;
+        }
+        
+        .onigiri {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('onigiri.png');
+            background-size: contain;
+        }
+
+        #ninjaman {
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('ninja.gif');
+            background-size: contain;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            
+        }
+        #pumpky{
+            background-color: black;
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            background-image: url('pumpky.gif');
+            background-size: contain;
+            position: absolute;
+            left: 400px;
+            top: 160px;
+        }
+        
+        
+    </style>
+</head>
+
+<body> 
+    
+    <div id='world'>
+        <div class='row'>
+
+        </div>
+    </div>
+    <div id='ninjaman'></div>
+    <div id='pumpky'></div>
+    <div id="Totalsushi"></div>
+    <div id="Yoursushi"></div>
+    <div id="Totalonigiri"></div>
+    <div id="Youronigiri"></div>
+
+    
+    
+</body>
+<script type="text/javascript"> //world,worldDict,drawWorld
+    
+</script>
+<script> //drawNinjaman
+       var ninjaman = {
+        x: 1,
+        y: 2
+    }
+    function drawNinjaman() {
+        document.getElementById('ninjaman').style.left = ninjaman.x * 40 + 'px'
+        document.getElementById('ninjaman').style.top = ninjaman.y * 40 + 'px'
+    }
+    drawNinjaman()
+    var pumpky = {
+        x: 10,
+        y: 4
+    }
+    function drawPumpky() {
+        document.getElementById('pumpky').style.left = pumpky.x * 40 + 'px'
+        document.getElementById('pumpky').style.top = pumpky.y * 40 + 'px'
+    }
+    drawPumpky()
+    
+    document.onkeydown = function (e) {
+       
+   
+        
+        if (e.keyCode == 37 && world[ninjaman.y][ninjaman.x - 1] ==0 ) { // LEFT
+            ninjaman.x--;
+           
+        }
+        else if (e.keyCode == 39 && world[ninjaman.y][ninjaman.x + 1] ==0 ) { // RIGHT
+            ninjaman.x++;
+            
+        }
+        else if (e.keyCode == 40 && world[ninjaman.y + 1][ninjaman.x] ==0 ) { // DOWN
+            ninjaman.y++;
+        }
+        else if (e.keyCode == 38 && world[ninjaman.y - 1][ninjaman.x] ==0) { // UP
+            ninjaman.y--;
+        }
+        
+        else if (e.keyCode == 37 && world[ninjaman.y][ninjaman.x - 1] ==2 ) { // LEFT
+            ninjaman.x--;
+            sushi--;
+            Yoursushi++;
+            Update ()
+        }
+        else if (e.keyCode == 39 && world[ninjaman.y][ninjaman.x + 1] ==2 ) { // RIGHT
+            ninjaman.x++;
+            sushi--;
+            Yoursushi++;
+            Update ()
+        }
+        else if (e.keyCode == 40 && world[ninjaman.y + 1][ninjaman.x] ==2 ) { // DOWN
+            ninjaman.y++;
+            sushi--;
+            Yoursushi++;
+            Update ()
+        }
+        else if (e.keyCode == 38 && world[ninjaman.y - 1][ninjaman.x] ==2) { // UP
+            ninjaman.y--;
+            sushi--;
+            Yoursushi++;
+            Update ()
+        }
+        else if (e.keyCode == 37 && world[ninjaman.y][ninjaman.x - 1] ==3 ) { // LEFT
+            ninjaman.x--;
+            onigiri--;
+            Youronigiri++;
+            Update ()
+        }
+        else if (e.keyCode == 39 && world[ninjaman.y][ninjaman.x + 1] ==3 ) { // RIGHT
+            ninjaman.x++;
+            onigiri--;
+            Youronigiri++;
+            Update ()
+        }
+        else if (e.keyCode == 40 && world[ninjaman.y + 1][ninjaman.x] ==3 ) { // DOWN
+            ninjaman.y++;
+            onigiri--;
+            Youronigiri++;
+            Update ()
+        }
+        else if (e.keyCode == 38 && world[ninjaman.y - 1][ninjaman.x] ==3) { // UP
+            ninjaman.y--;
+            onigiri--;
+            Youronigiri++;
+            Update ()
+        }
+        
+        drawNinjaman()
+     
+       
+            if(world[pumpky.y]<world[ninjaman.y] && world[pumpky.y+1][pumpky.x] !=1) { // LEFT
+                pumpky.y++;
+                drawPumpky ()
+            }
+            else if(world[pumpky.y]>world[ninjaman.y] && world[pumpky.y-1][pumpky.x] !=1 ) { // LEFT
+                pumpky.y--;
+                drawPumpky()
+            }
+            else if(world[pumpky.x]<world[ninjaman.x] && world[pumpky.y][pumpky.x+1] !=1) { // LEFT
+                pumpky.x++;
+                drawPumpky ()
+            }
+            else if(world[pumpky.x]>world[ninjaman.x] && world[pumpky.y][pumpky.x-1] !=1 ) { // LEFT
+                pumpky.x--;
+                drawPumpky()
+            }  
+      
+        drawPumpky()
+
+
+        
+    }
+ 
+
+
+
+</script>
+<script type="text/javascript"> //Findsushi
+
+    sushi = 0
+    Yoursushi = 0
+    onigiri = 0
+    Youronigiri = 0
+function Findsushi() {
+      
+
+        for (var row = 0; row < world.length; row++) {
+            for (var x = 0; x < world[row].length; x++) {
+                if (worldDict[world[row][x]]=='sushi')
+                sushi += 1
+                }
+            
+        }
+    }
+    Findsushi()
+    function Findonigiri() {
+      
+
+      for (var row = 0; row < world.length; row++) {
+          for (var x = 0; x < world[row].length; x++) {
+              if (worldDict[world[row][x]]=='onigiri')
+              onigiri += 1
+              }
+          
+      }
+  }
+  Findonigiri()
+
+    function Update (){
+        world[ninjaman.y][ninjaman.x]=0
+        drawWorld ()
+
+        document.getElementById('Totalsushi').innerHTML = "There are "+sushi+" sushi";
+        document.getElementById('Yoursushi').innerHTML = "You have "+Yoursushi+" sushi";
+        document.getElementById('Totalonigiri').innerHTML = "There are "+onigiri+" onigiri";
+        document.getElementById('Youronigiri').innerHTML = "You have "+onigiri+" onigiri";
+        
+    }
+
+    Update ()
+    
+</script>
+
+<script>
+
+
+
+</script>
+
+
+
+</html>

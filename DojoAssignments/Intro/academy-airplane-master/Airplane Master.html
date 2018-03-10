@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+<body>
+        <style type="text/css">
+        #ocean {
+            background-image: url("us-map-hd.jpg");
+            width:900px;
+            height:700px;
+        
+        }
+        .player{
+            width: 70px;
+            height:75px;
+            position:absolute;
+            background-size:70px 75px;
+            background-image: url("player.png")
+        }
+        .enemy{
+            width: 70px;
+            height:75px;
+            background-size:70px 75px;
+            position:absolute;
+            background-image: url("enemy.jpg")
+        }
+        .missile{
+            width:2px;
+            height: 10px;
+            position:absolute;
+            background-color:blue;
+        }
+        .points{
+            background-color:white;
+            width: 50px;
+            font-size: 20px;
+            font-style: oblique;
+            
+        }
+
+        </style>
+        <div id="score">
+            <div class = "points" style ='top: 701 px;'></div></div>
+
+        <div id="ocean">
+            
+        <div id="players">
+            <div class = "player"></div></div>
+
+        <div id="enemies">
+            <div class = "enemy"></div></div>
+
+        <div id="missiles"></div>
+
+      
+
+        </div>
+        </body>
+<script type = "text/javascript">
+    var Points = 0
+    var player= 
+    {x:700, y:500}
+    var enemy = [
+    { x: 500, y: 375},
+    { x: 500, y: 175},
+    { x: 500, y: 75},
+    { x: 500, y: 275},
+    { x: 400, y: 300},
+    { x: 400, y: 200},
+    { x: 400, y: 100},
+    { x: 400, y: 0}
+    ]
+    var missiles = []
+
+function drawPlayer() {//Function Draws the PLayer
+        content = "<div class = 'player' style ='left:"+ player.x +"px; top: "+player.y+"px'></div>";
+     document.getElementById("players").innerHTML = content;
+    }
+    
+function drawEnemy(){//Function Draws the Enemy
+        contente = ""
+        for(var idx = 0; idx<enemy.length;idx++){
+    contente += "<div class = 'enemy' style ='left:"+ enemy[idx].x +"px; top: "+enemy[idx].y+"px'></div>";
+    document.getElementById("enemies").innerHTML = contente;
+        }
+
+    }
+    
+function moveEnemy (){//Function Moves Enemy on a clock
+    for(var idx = 0; idx<enemy.length;idx++){
+        enemy[idx].y =enemy[idx].y + .5
+        if (enemy[idx].y>700){
+            enemy[idx].y-=700
+            Points -=10
+            document.getElementById("score").innerHTML = "Score:"+Points+"";}}}
+    
+function drawMissile (){//Function Draws the Missiles
+        Missilecontent = '';
+        for (var idm = 0; idm<missiles.length;idm++){
+            Missilecontent += "<div class ='missile' style ='left:"+missiles[idm].x+"px; top:"+missiles[idm].y+"px'></div>";
+
+        }
+        document.getElementById("missiles").innerHTML = Missilecontent;
+        
+    }
+    
+function moveMissile (){//Function Moves Missiles
+        for(var idx = 0; idx<missiles.length;idx++){
+        missiles[idx].y =missiles[idx].y - 2
+        if (missiles[idx].y<10){
+            missiles[idx].y = 0
+            missiles[idx].x = 0}
+        drawMissile ()}}
+    
+    
+document.onkeydown = function(e){//controls
+        console.log(e)
+		
+    		if(e.keyCode == 37 && player.x>150) { // LEFT
+    			player.x = player.x - 20;
+				direction = 'left'
+    		}
+    		else if (e.keyCode == 39 && player.x<750) { // RIGHT
+    			player.x = player.x + 20;    		
+                direction = 'right'
+    		}
+    		else if (e.keyCode == 40 && player.y<500) { // DOWN
+				player.y = player.y + 20;
+                direction = 'down'
+    		}
+			else if (e.keyCode == 38 && player.y>100) { // UP
+                    player.y = player.y - 20;
+					direction = 'top'
+                    }
+            if (e.keyCode == 32){
+                missiles.push ( {x: (player.x+34) , y: (player.y-8) } )
+                drawMissile()
+            }
+        }
+
+      
+        function gameLoop () {
+            setTimeout(gameLoop,.1)
+            moveEnemy()
+            drawEnemy ()
+            drawPlayer()
+           moveMissile ()
+        }
+        gameLoop();
+    </script>
+
+
+
+</html>
