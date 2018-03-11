@@ -1,0 +1,99 @@
+#background{
+    height:900px;
+    width:700px;
+    background: radial-gradient(rgba(63, 7, 63, 0.541),rgba(31, 0, 0, 0.884));
+    display:inline-block;
+}
+#header{
+    height:80px;
+    width:700px;
+    background-color:rgb(223, 223, 223);
+    top: 0px;
+    display:inline-block;
+}
+h1{
+    top:10px;
+    left: 10px;
+    margin:20px;
+    display:inline-block;
+
+}
+h2{
+    margin-left:100px;
+    display:inline-block;
+
+}
+
+#profilepic{
+    border: rgb(170, 168, 168) 5px solid;
+    height:200px;
+    width:300px;
+    margin:15px;
+    display:inline-block;
+}
+#shorttile{
+    height:200px;
+    width:310px;
+    margin:15px;
+    background:gainsboro;
+    display:inline-block;
+   
+}
+#subheader{    
+    height:40px;
+    width: inherit;
+    color:white;
+    text-align: left;
+    background: linear-gradient(rgb(156, 155, 155),rgb(109, 108, 108),rgb(156, 155, 155));
+    
+}
+p{
+    margin-left: 10px;
+}
+p1{
+    margin:10px;
+    display:inline-block;
+    font-size: 24px;
+}
+
+
+#longtile{
+    height:310px;
+    width:195px;
+    margin: 15px 15px 0px 15px;
+    background:gainsboro;
+    display:inline-block;
+    position:static;
+    
+}
+
+
+
+
+#smalltile{
+    height:150px;
+    width:195px;
+    margin:0px 15px;
+    background:gainsboro;
+    display:inline-block;
+    
+}
+#logo{
+    margin:2px;
+    display:inline-block;
+}
+
+#logoset{
+    margin:2px
+}
+
+#footer{
+    height:80px;
+    width:700px;
+    background-color:rgb(223, 223, 223);
+    top: 850px;
+    position: absolute;
+}
+a{
+    background-color:rgb(223, 223, 223);
+}
