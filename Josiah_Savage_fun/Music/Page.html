@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <button onclick="playkey()" type="button">Play Video</button>
+    <button onclick="pausekey()" type="button">Pause Video</button>
+    <audio id="1" src="1.wav">
+    <audio id="2" src="2.wav">
+    <audio id="3" src="3.wav">
+    <audio id="4" src="4.wav">
+    <audio id="5" src="5.wav">
+    <audio id="6" src="6.wav">
+    <audio id="7" src="7.wav">
+    <audio id="8" src="8.wav">
+    <audio id="9" src="9.wav">
+    <audio id="10" src="10.wav">
+    <audio id="11" src="11.wav">
+    <audio id="12" src="12.wav">
+    <audio id="13" src="13.wav">
+        
+    </audio>
+    <script>
+    var key = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+    var notes = {
+        // 1:document.getElementById("1"),
+        // 2:document.getElementById("2"),
+        // 3:document.getElementById("3"),
+        // 4:document.getElementById("4"),
+        // 5:document.getElementById("5"),
+        // 6:document.getElementById("6"),
+        // 7:document.getElementById("7"),
+        // 8:document.getElementById("8"),
+        // 9:document.getElementById("9"),
+        // 10:document.getElementById("10"),
+        // 11:document.getElementById("11"),
+        // 12:document.getElementById("12"),
+        // 13:document.getElementById("13")
+        // 0: 261.6,
+        0:0,
+        30:130.81,
+        31:138.59,
+        32:146.83,
+        33:155.56,
+        34:164.81,
+        35:174.61,
+        36:185.00,
+        37:196.00,
+        38:207.65,
+        39:220.00,
+        310:233.08,
+        311:246.94,
+        312:261.63,
+        50:130.81,
+        51:277.2,
+        52:293.7,
+        53:311.1,
+        54:329.6,
+        55:349.2,
+        56:370.0,
+        57:392.0,
+        58:415.3,
+        59:440.0,
+        510:466.2,
+        511:493.9,
+        512:523.3
+
+    }
+    var song1 = [0,57,53,57,0,57,53,57,0,57,53,57,0,57,53,57,0,57,55,57,0,57,55,57,0,57,55,57,0,57,55,57]
+    var song2 = [30,33,30,33,30,33,30,33,30,33,30,33,30,33,30,33,32,35,32,35,32,35,32,35,32,35,32,35,32,35,32,35]
+    var song3 = [55,55,50,50]
+    var song4 = [4,4,1,4]
+        // [1,1,1,1,1,1]
+    
+    x=0
+    y=0
+    z=0
+    var audioCtx = new AudioContext();
+    function song_1 (){
+        if (x>=song1.length){
+            x=0
+            // setTimeout(song_1,0)
+
+        }
+
+        if (y>=song2.length){
+            y=0
+            // setTimeout(song_2,0)
+
+        }
+        if (z>=song3.length){
+            z=0
+            // setTimeout(song_3,0)
+
+        }
+        else {
+
+        
+        var oscillator = audioCtx.createOscillator();
+        oscillator.frequency.value = notes[song1[x]];
+        oscillator.connect(audioCtx.destination);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime+.1);
+        x++
+        setTimeout(song_1,200)
+        
+        var oscillator = audioCtx.createOscillator();
+        oscillator.frequency.value = notes[song2[y]];
+        oscillator.connect(audioCtx.destination);
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime+.1);
+        y++
+        
+   
+        // setTimeout(song_2,200)
+        
+         }
+    }
+song_1()
+//     function song_2 (){
+//         if (y>=song2.length){
+//             y=0
+//             setTimeout(song_2,0)
+
+//         }
+//         else {
+        
+//         var oscillator = audioCtx.createOscillator();
+//         oscillator.frequency.value = notes[song2[y]];
+//         oscillator.connect(audioCtx.destination);
+//         oscillator.start();
+//         oscillator.stop(audioCtx.currentTime+.1);
+//         y++
+//         setTimeout(song_2,200)
+//         }
+//     }
+// song_2()
+
+//     function song_3 (){
+//         if (z>=song3.length){
+//             z=0
+//             setTimeout(song_3,0)
+
+//         }
+//         else {
+        
+//         var oscillator = audioCtx.createOscillator();
+//         oscillator.frequency.value = notes[song3[z]];
+//         oscillator.connect(audioCtx.destination);
+//         oscillator.start();
+//         oscillator.stop(audioCtx.currentTime+.2);
+//         z++
+//         setTimeout(song_3,200)
+//         }
+//     }
+// song_3()
+
+        
+
+    </script>
+</body>
+</html>
