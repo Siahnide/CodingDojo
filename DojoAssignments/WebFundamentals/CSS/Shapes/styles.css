@@ -1,0 +1,79 @@
+#square{
+    height:100px;
+    width:100px;
+    background:blue;
+    margin:50px;
+}
+#circle{
+    height:100px;
+    width:100px;
+    background:blue;
+    margin:50px;
+    border-radius: 100px;
+}
+#triangle{
+    height:100px; 
+    width:100px;
+    background:blue;
+    margin:50px;
+    overflow: hidden;
+}
+    .cutout1{
+    height:100px;
+    width:113px;
+    transform: rotate(30deg);
+    top:-50px;
+    right:-7px;
+    background:white;
+    position: relative;
+
+    }
+    .cutout2{
+    height:100px;
+    width:113px;
+    transform: rotate(-30deg);
+    top:-50px;
+    right:-7px;
+    background:white;
+    position: relative;
+
+    }
+#pacman{
+    transform: rotate(150deg);
+
+    height:100px;
+    width:100px;
+    background:blue;
+    margin:50px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+#triangle1{
+    transform: rotate(80deg);
+
+    height:100px; 
+    width:100px;
+    background:white;
+    margin:50px;
+    overflow: hidden;
+}
+    .cutout11{
+    height:100px;
+    width:113px;
+    transform: rotate(30deg);
+    top:-50px;
+    right:-7px;
+    background:blue;
+    position: relative;
+
+    }
+    .cutout12{
+    height:100px;
+    width:113px;
+    transform: rotate(-30deg);
+    top:-50px;
+    right:-7px;
+    background:blue;
+    position: relative;
+
+    }

@@ -1,0 +1,271 @@
+*{
+    display:inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    position:static;
+
+}
+#wrapper{
+    width:970px;
+    height:1100px;
+    vertical-align: top;
+}
+span{
+    color:rgb(1, 169, 211);
+}
+
+#fancygradient{
+    background: linear-gradient(whitesmoke,white,white)
+}
+
+#header img{
+    display: unset;
+    height:100px;
+    text-align: left;
+    padding-bottom:20px;
+    vertical-align: bottom;
+    margin:0px 0px 20px 0px;
+    position: absolute;
+    color:rgb(90, 90, 90);
+    
+}
+
+    h1{
+        display: unset;
+        width:970px;
+        height:100px;
+        text-align: left;
+        padding-bottom:20px;
+        vertical-align: bottom;
+        margin:0px 0px 20px 0px;
+        position: absolute;
+        color:rgb(90, 90, 90);
+        top:40px;
+        left:110px;
+        font-size:38px
+        }
+
+h2{
+    width:950px;
+    padding:20px 0px 20px 20px;
+    margin:0px;
+    color:whitesmoke;
+    background: linear-gradient( rgb(0, 99, 165),rgb(2, 125, 207),rgb(0, 99, 165));
+    margin-top:80px;
+}
+
+.left{
+width:240px;
+height:700px;
+margin-bottom:200px;
+vertical-align: top;
+}
+.what{
+height:120px;
+width: 240px;
+display:inline-block;
+}
+
+h3{
+    display:inline-block;
+}
+h3a{
+color: rgb(219, 58, 0);
+}
+p3{
+display:inline-block;
+margin:5px 0px 30px 0px
+}
+.button2{
+    display:inline-block;
+    background:rgb(2, 112, 255);
+    color: white;
+    border: 0px;
+    box-shadow:1px 1px rgba(0, 0, 0, 0.781);
+    border-radius:5px;
+    width:240px;
+    height: 40px;
+    font-size:18px ;
+    
+}
+.button2a{
+    display:inline-block;
+    background:rgb(255, 145, 2);
+    color: white;
+    border: 0px;
+    margin-top:5px;
+    box-shadow:1px 1px rgba(0, 0, 0, 0.781);
+    border-radius:5px;
+    width:240px;
+    height: 40px;
+    font-size:18px;
+}
+
+.box{
+    height:2px;
+    width:240px;
+    background: grey;
+    display:inline-block;
+    margin: 40px 0px 10px 0px
+}
+
+
+
+.ninja{
+    color:whitesmoke;
+    align-items: center;
+    height:360px;
+    width:240px;
+    display:inline-block;
+    background-image: url("images/ad_background.png");
+}
+
+.button3{
+    display:inline-block;
+    margin:10px 15px 10px 0px;
+    background:rgb(2, 175, 255);
+    color: white;
+    border: 0px;
+    box-shadow:1px 1px rgba(0, 0, 0, 0.781);
+
+    border-radius:5px;
+    width:170px;
+    height: 40px;
+}
+
+.ninjawrap{
+    display:inline-block;
+    margin:0px 35px 0px 35px;
+}
+h4{
+    text-align: center;
+    font-size: 24px;
+    /* padding-top:8px; */
+    display:inline-block;
+}
+
+.right{
+    widows: 725px;
+    height:900px;
+    margin-left:20px
+}
+
+.rightcontact{
+    display:inline-block;
+    width:705px;
+    height:100px;
+
+}
+
+.dns{
+    width:465px;
+    height:100px;
+    display:inline-block;
+    margin:0px;
+    font-size: 26px;
+}
+
+
+    
+
+.right img{
+    display:inline-block;
+    margin-top:0px;
+    vertical-align: top;
+    
+    
+}
+.box1{
+    height:2px;
+    width:700px;
+    background: grey;
+    display:inline-block;
+    margin: 0px 0px 10px 0px
+}
+#contactinfo{
+    display:inline-block;
+    height:100px;
+    vertical-align: top;
+    margin-top:0px;
+
+}
+#contactinfo img{
+    background: whitesmoke;
+    display:inline-block;
+    vertical-align: top;
+    margin-top:20px;
+    margin-left:0px
+
+    
+}
+.contact{
+    width:140px;
+    display:inline-block;
+    vertical-align: top;
+    margin-top:10px
+
+}
+
+/* .phone{
+    display:inline-block;
+} */
+
+p{
+    display:block;
+    margin-top:10px;
+}
+p1{
+    font-size: 10px;
+    display:inline-block;
+}
+
+span1{
+    color:rgb(1, 169, 211);
+    font-size: 22px;
+    display:inline-block;
+
+}
+
+.ClientsandServers p{
+    margin:0px
+}
+
+.clientimg{
+    margin:0px 0px 30px 200px;
+}
+
+h6{
+    font-size:22px;
+    display:inline-block;
+    margin:0;
+    margin-bottom:10px;
+    color:rgb(0, 81, 255)
+}
+li{
+    margin-bottom:10px
+}
+
+.right img{
+    display:inline-block;
+}
+
+.big3border{
+    border: blue 4px solid;
+    border-bottom: none;
+    padding:5px
+
+}
+.big3{
+    width:580px;
+    display:inline-block;
+    margin:0px
+}
+.big3 h6{
+    width: 480px;
+    margin:0px;
+}
+p5{
+    margin-bottom:5px;
+}
+
