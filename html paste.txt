@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+
+    </head>
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+    <body>
+
+    </body>
+</html>
+<

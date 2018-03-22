@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+    <style type="text/css">
+    #email{
+    margin-right:10px;
+}
+
+#head{
+    padding:0px;
+    border:1px solid black;
+    width:500px;
+    margin:0px;
+}
+    #head p{
+        display:inline;
+        margin-left:40px;
+    }
+h1{
+    margin-top:40px;
+    padding:0px;
+}
+
+form{
+    width:300px;
+    height:100px;
+    /* display:block; */
+}
+form label{
+    display:inline;
+}
+form input{
+    display:block;
+}
+ul1{
+    display:inline-block;
+    font-size:12px;
+    text-align: center;
+}
+ul1 p{
+    align-content: center;
+    margin:5px 10px 5px 10px;
+
+    width:100px;
+    border:1px solid black;
+
+}
+
+#EA{
+    font-size:10px;
+}
+#submit{
+margin-top:10px;
+}
+    </style>
+    </head>
+    <script>
+        $(document).ready(function(){
+            $('#submit').click(function(){
+                var firstName = $("#FirstName").val();
+                var lastName = $("#LastName").val();
+                var email = $("#Email").val();
+                var phone = $("#Phone").val();
+
+                console.log(firstName)
+                $('#FN').append("<p>"+ firstName +"</p>")
+                $('#LN').append("<p>"+ lastName +"</p>")
+                $('#EA').append("<p>"+ email +"</p>")
+                $('#PN').append("<p>"+ phone +"</p>")
+                return false
+            })
+
+        });
+    </script>
+    <body>
+        <ul id="head">
+            <p >First Name</p>
+            <p >Last Name</p>
+            <p >Email Address</p>
+            <p >Phone #</p>
+        </ul>
+      <ul1 id="FN"></ul1>
+      <ul1 id="LN"></ul1>
+      <ul1 id="EA"></ul1>
+      <ul1 id="PN"></ul1>
+
+        
+        <h1>Add User</h1>
+
+        <form id="user">
+        
+                First Name:<input type="text" id="FirstName" name="FirstName">
+
+                Last Name:<input type="text" id="LastName" name="LastName">
+
+                Email:<input type="text" id="Email" name="Email">
+
+                Phone:<input type="text" id="Phone" name="Phone">
+                
+                <button id="submit">Add User</button>
+        </form>
+    </body>
+</html>
+    

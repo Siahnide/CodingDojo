@@ -1,0 +1,39 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+            <style type="text/css">
+            
+            #img1{
+                display:block;
+            }
+            </style>
+    </head>
+    <script>
+        $(document).ready(function(){
+            $('img').click(function(){
+                $(this).hide("fast");
+            })
+            $('button').click(function(){
+                $('img').show("fast");
+            })
+        })
+    </script>
+    <body>
+        <div id="img1">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        </div>
+        <div id="img1">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        <img src="down1.png" alt="ninja" width="59px" height="86px">
+        </div>
+      <button>Restore</button>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+            <style type="text/css">
+            #img{
+                display:block
+            }
+            #img img{
+                margin-top:10px;
+                display:block;
+            }
+            </style>
+    </head>
+    <script>
+            var count = 0;
+            var y = "ninja";
+            var x = "img/ninja"+count+".png"
+            $(document).ready(function(){
+        $('img').click(function(){
+            if (count == 5 && y == "cat" ){
+                count = 0;
+                y="ninja"
+                var x = "img/"+y+""+count+".png";
+
+            }
+            if (count == 5 && y == "ninja" ){
+                count = 0;
+                y="cat"
+                var x = "img/"+y+""+count+".png";
+
+            }
+            else {
+                var x = "img/"+y+""+count+".png";
+            }
+            
+            $(this).attr("src",x)
+            count++;
+            
+        })
+    });
+    </script>
+    <body>
+        <div id="img">
+        <img id="0" src="img/ninja4.png">
+        <img id="1" src="img/cat3.png">
+        <img id="2" src="img/ninja0.png">
+        <img id="3" src="img/ninja2.png">
+        <img id="4" src="img/cat1.png">
+        </div>
+    
+    <!-- <img id="0" src="img/ninja0.png">
+    <img id="1" src="img/ninja1.png">
+    <img id="2" src="img/ninja2.png">
+    <img id="3" src="img/ninja3.png">
+    <img id="4" src="img/ninja4.png"> -->
+    </body>
+
+</html>

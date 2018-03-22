@@ -1,0 +1,56 @@
+<!Doctype>
+<html>
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+</head>
+<body>
+<div id="clickme">
+    Click here!
+</div>
+    <h1> -Hide-</h1>
+    <p>Click me to slide!</p>
+    <h2 id = "fade">faaade in</h2>
+    <h3>helloo</h3>
+    <h4>right heree</h4>
+</body>
+<script type="text/javascript" >
+    $(document).ready(function(){
+        console.log("ready!")
+
+        $('#clickme').click(function(){
+            $('h1').hide("slow")
+        })
+        $('body').click(function(){
+            $('h1').show()
+        });
+
+        $( "p" ).click(function() {
+            $( this ).slideUp();
+        });
+        $('h3').click(function(){
+            $('p').toggle()
+        });
+        $('h3').click(function(){
+            $('p').slideDown()
+        });
+        $('h4').click(function(){
+            $(this).append("Hello world")
+        });
+        $('h4').click(function(){
+            $(this).after("Hello world")
+        });
+        $('h4').click(function(){
+            $(this).before("Hello world")
+        });
+       $('p').html("<p> well isn't this a surprise</p>");
+
+       $('h1').attr("background-color","blue")
+
+       $('h1').click(function(){
+        $('h1').text("I have been altered...")
+        });
+        $('h1').data("foo","fighters")
+    });
+
+</script>
+</html>
