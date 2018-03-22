@@ -24,16 +24,20 @@
 	Coding is <div id="magic"></div>
 
 	<script>
-		var x = document.getElementById("magic").textContent += '&nbsp;';
 	
-		var words = ["fun", "exciting", "about"+x+"not"+x+"giving"+x+"up", "being"+x+"helpful", "being"+x+"open", "what"+x+"I"+x+"learned"+x+"at"+x+"CodingDojo!"],
+		var words = ["fun","exciting", "about not giving up", "being helpful", "being open", "what I learned at CodingDojo!"],
 			el = document.getElementById('magic'),
 			word_counter = 0,
 			character_counter = 0
 
 		function updateText()
 		{
-			el.innerHTML = el.innerHTML+words[word_counter][character_counter++];
+			var x =words[word_counter][character_counter++];
+
+			if(x == " "){
+				x = "&nbsp;";
+			}
+			el.innerHTML += x;
 
 			if(character_counter == words[word_counter].length + 1)
 			{
