@@ -1,0 +1,66 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+#world{
+    border:5px black solid;
+    width:970px;
+    height:100px;
+    background:grey;
+}
+
+#character{
+    position:absolute;
+    top:450px;
+    left:20px;
+    height:23px;
+    width:12px;
+}
+
+
+#sprite {
+    background: url('img/charge1.png') no-repeat -9px -104px;
+    position:absolute;
+    top:82px;
+    left:20px;
+	width: 21px;
+	height: 24px;
+}
+
+#sprite h1 {
+	background: url('img/charge1.png') no-repeat -47px -104px;
+	width: 21px;
+	height: 24px;
+}
+#sprite h2 {
+	background: url('img/charge1.png') no-repeat -87px -104px;
+	width: 22px;
+	height: 24px;
+}
+#sprite h3 {
+    background: url('img/charge1.png') no-repeat -128px -105px;
+	width: 22px;
+    height: 23px;
+}
+#sprite h4 {
+    background: url('img/charge1.png') no-repeat -162px -110px;
+	width: 15px;
+    height: 9px;
+    position:absolute;
+    left:20px;
+    top:10px;
+    
+}
+#sprite h5 {
+	background: url('img/charge1.png') no-repeat -193px -111px;
+	width: 15px;
+	height: 7px;
+}
+/* jump */
+#sprite p { 
+	background: url('img/charge2.png') no-repeat -160px -107px;
+	width: 24px;
+	height: 30px;
+}
+
+

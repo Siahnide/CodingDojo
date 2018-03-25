@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+    </head>
+    <script>
+        $(document).ready(function(){
+
+			var x = 20; //leftValue
+			var y =82; //topvalue
+			var direction = "";
+			var walk = 1;
+			var fire = false;
+			var count = 0;
+
+			function update(x,y){
+			
+				document.getElementById("sprite").style.left = x +"px";
+				document.getElementById("sprite").style.top = y +"px";
+				$('#sprite').html("<img>")
+
+				// document.getElementById("sprite").style.backgroundImage = "url('img/"+direction+""+walk+".png')";
+
+    		}
+			
+			function gravity(){
+				
+				if(y<82){
+					y ++;
+					$('#sprite').html("<p>")
+					setTimeout(gravity,10)
+				}
+				if(y<82){
+					document.getElementById("sprite").style.top = y +"px";
+				}
+				if (y>81){
+					$('#sprite').html("<img>")
+
+				}
+
+				
+				
+			}
+			function jump(){
+				
+				if(y>50){
+					console.log(y)
+					y--;
+					$('#sprite').html("<p>");
+					setTimeout(jump(),20);
+				}
+				if(y>50){
+					document.getElementById("sprite").style.top = y +"px";
+				}
+				if (y<51){
+					gravity();
+					console.log(y);
+					var temp = false;
+				}
+
+			
+				return false
+			}
+
+			document.onmousedown = function(event) {
+				
+				switch (event.which) {
+					case 1: //left Click fire
+						// alert('Left Mouse button pressed.');
+						Fire()
+
+						break;
+					case 2: //middle click
+						// alert('Middle Mouse button pressed.');
+						break;
+						update()
+				}
+			}
+
+			document.onkeydown = function(event) {
+				if (walk==1){
+					walk=2;
+				}
+				else if (walk==2){
+					walk=1;
+				}
+				switch (event.which) {
+					case 32: //spacebar jump
+						if(y>25 && fire==false){
+							var temp = true
+							jump()
+							
+						}
+						break;
+					// case 87: //W up
+					// 	if(y>10 && fire==false){
+					// 		y -= 5;
+							
+					// 		update(x,y);
+					// 	}
+					// 	break;
+					case 65: // A left
+						if (x>5 && fire==false){
+							x -= 5;
+							update(x,y);
+						}
+						break;
+					case 68: // D right
+						if (x<970 && fire==false){
+							x += 5;
+							update(x,y);
+						}
+						break;
+					case 83: // s down
+						if(y<82 && fire==false){
+						y += 5;
+						update(x,y);
+						}
+						break;
+				}
+			}
+		function Fire(){ //charge 1
+			var fire = true;
+		$('#sprite').html("<h1>")
+		setTimeout(Fire1,500)
+		}
+
+		function Fire1(){ //charge 2
+		$('#sprite h1').html("<h2>")
+		setTimeout(Fire2,500)
+		}
+
+		function Fire2(){ //fire
+		$('#sprite h2').html("<h3>")
+		setTimeout(Fire3,0)
+		}
+
+		function Fire3(){ //add missile
+		$('#sprite').append("<h4>")
+		setTimeout(Fire4,0)
+		}
+
+		function Fire4(){ //launch missile
+			count +=2;
+			console.log("going")
+			$('#sprite h4').css("left",count);
+			if(count<100){
+				setTimeout(Fire4,10)
+			}
+			else{
+				console.log("done")
+				count=0;
+				$('#sprite').html('<img>')
+				}
+
+			}
+		// function jump(temp){ //jump
+		// 	console.log(temp,y)
+		// 	if(temp<y){
+		// 			y --;
+		// 			document.getElementById("sprite").style.top = y +"px";
+		// 			$('#sprite').html("<p>")
+		// 			setTimeout(jump(temp),150)
+		// 		}
+			
+		// 	else (setTimeout(gravity,150))
+		// }
+
+	});
+    </script>
+	
+	
+	<body>
+		
+		<div id="world">
+			
+		</div>
+		<div id="sprite"></div>
+
+	
+
+
+    </body>
+</html>
