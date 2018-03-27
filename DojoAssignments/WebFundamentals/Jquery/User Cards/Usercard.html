@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style type="text/css">
+    
+    </style>
+    </head>
+    <script>
+        $(document).ready(function(){
+                var count = 0
+            $('.btn').click(function(){
+                    
+                if($('#FirstName').val() !="" && $('#LastName').val() !=""){
+                    count++;
+                    var first=$('#FirstName').val();
+                    var last=$('#LastName').val();
+                    $('#FirstName').val("");
+                    $('#LastName').val("");
+                    $('#info').append("<h1 id='info"+count+"'></h1> ")                    
+                    $("#info"+count+"" ).append('<h2>'+first+" "+last+'</h2>')
+                    $("#info"+count+" h2" ).append('<p>Click here for more information!</p>')
+                }
+
+            })
+            $(document).on('click','h1 p',function(){
+                var temp =$(this).text()
+                if($(this).text() == "Click here for more information!"){
+                    $(this).text($('#About').val())
+                    $('#About').val("");
+                }
+                else{
+                    $(this).text("Click here for more information!")
+
+                }
+                console.log(temp)
+            });
+            
+                
+        });
+    </script>
+    <body>
+        
+        
+
+        <form id="user">
+        
+                First Name:<input type="text" id="FirstName" name="FirstName">
+
+                Last Name:<input type="text" id="LastName" name="LastName">
+
+
+                Info:<textarea id="About"></textarea>
+                
+                <div class="btn">Add User</div>
+                
+        </form>
+        <div id="info"></div>
+    </body>
+</html>
+    

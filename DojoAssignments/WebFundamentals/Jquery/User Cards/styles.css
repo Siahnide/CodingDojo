@@ -1,0 +1,77 @@
+#email{
+    margin-right:10px;
+}
+
+#head{
+    padding:0px;
+    border:1px solid black;
+    width:500px;
+    margin:0px;
+}
+    #head p{
+        display:inline;
+        margin-left:40px;
+    }
+h1{
+    margin-top:40px;
+    padding:0px;
+}
+
+form{
+    width:300px;
+    height:50px;
+    /* display:block; */
+}
+form label{
+    display:inline;
+}
+form input{
+    display:block;
+}
+form textarea{
+    display:block;
+}
+ul1{
+    display:inline-block;
+    font-size:12px;
+    text-align: center;
+}
+ul1 p{
+    align-content: center;
+    margin:5px 10px 5px 10px;
+
+    width:50px;
+    border:1px solid black;
+
+}
+
+#EA{
+    font-size:10px;
+}
+#submit{
+margin-top:10px;
+}
+
+#info{
+    
+}
+#info h1{
+    display:inline-block;
+    padding:50px;
+    background:whitesmoke;
+    border:black 1px solid;
+    border-radius:10px;
+    width:200px;
+    height:100px;
+    margin-left:300px;
+    vertical-align: middle;
+    font-size:16px;
+            text-align: center;
+        }
+    #info p{
+            vertical-align: bottom;
+            font-size:12px;
+            text-align: center;
+        }
+
+ 
