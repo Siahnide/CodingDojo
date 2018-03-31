@@ -1,0 +1,145 @@
+body{
+    margin:0px;
+    
+}
+#world{
+    background:black;
+    position:fixed;
+    width:100%;
+    height:100%
+    
+    
+}
+#world h1{
+    vertical-align: middle;
+    text-align: center;
+    color:white;
+    font-size:100%;
+    margin:00% 40% 0% 40%;
+}
+#world h2{
+    vertical-align: middle;
+    text-align: center;
+    color:white;
+    font-size:150%;
+    margin:20% 40% 5% 40%;
+
+}
+#world p{
+    vertical-align: middle;
+    text-align: center;
+    color:white;
+    font-size:60%;
+    margin:10% 40% 40% 40%;
+
+}
+.row{
+    margin-bottom:-5px;
+}
+.blank{
+    margin-right:-5px;
+    display:inline-block;
+    height:30px;
+    width:30px;
+    background:black;
+
+}
+.wall{
+    margin-right:-5px;
+    display:inline-block;
+    height:30px;
+    width:30px;
+    background:blue;
+
+}
+.bit{
+    background:rgb(136, 255, 249);
+    height:10px;
+    width:10px;
+    border-radius: 10px;
+    display:inline-block;
+    margin-bottom:5px;
+    margin-right:4.5px;
+    margin-left:10.5px;
+}
+.cherry{
+    background:rgb(163, 0, 0);
+    height:10px;
+    width:10px;
+    border-radius: 10px;
+    display:inline-block;
+    margin-bottom:5px;
+    margin-right:4.5px;
+    margin-left:10.5px;
+}
+#pacman{
+    height:30px;
+    width:30px;
+    background-size:contain;
+    
+    background-image: url('img/pacman.gif');
+    position:absolute;
+    transform:rotate(180deg);
+}
+#ghost{
+    height:30px;
+    width:30px;
+    background-size:contain;
+    
+    background-image: url('img/ghost.png');
+    position:absolute;
+}
+#ghost2{
+    height:30px;
+    width:30px;
+    background-size:contain;
+    
+    background-image: url('img/ghost.png');
+    position:absolute;
+}
+#score{
+    width:40px;
+    color:white;
+    background:rgba(0, 0, 0, 0.479);
+    padding:7px;
+    height:13px;
+    border:white 2px solid;
+    position: absolute;
+    
+}
+#L1{
+    position: absolute;
+    background:gold;
+    left:60px;
+    top:10px;
+    height:10px;
+    width:10px;
+    border-radius: 10px;
+    margin-bottom:5px;
+    margin-right:4.5px;
+    margin-left:10.5px;
+}
+#L2{
+    position: absolute;
+    background:gold;
+    left:80px;
+    top:10px;
+    height:10px;
+    width:10px;
+    border-radius: 10px;
+    margin-bottom:5px;
+    margin-right:4.5px;
+    margin-left:10.5px;
+}
+#L3{
+    position: absolute;
+    background:gold;
+    left:100px;
+    top:10px;
+    height:10px;
+    width:10px;
+    border-radius: 10px;
+    margin-bottom:5px;
+    margin-right:4.5px;
+    margin-left:10.5px;
+}

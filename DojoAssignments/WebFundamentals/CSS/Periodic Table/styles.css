@@ -1,0 +1,72 @@
+*{
+    margin:0px;
+    margin-bottom:5px;
+    vertical-align: top;
+}
+body{
+    margin:5px;
+}
+p{
+    height:40px;
+    width:40px;
+    display:inline-block;
+    /* border:1px solid black; */
+    padding:0px;
+    text-align: center;
+}
+#gprow{
+    position:absolute;
+    width:950px;
+    height:40px;
+    top:0px;
+    left:50px;
+}
+#gprow p {
+    margin:0px;
+    margin-right:-4px;
+}
+/* }
+#gpcolumn{
+    position:absolute;
+    width:950px;
+    height:40px;
+    top:0px;
+    left:0px;
+}
+#gpcolumn p{
+    display:block;
+    margin:0px;
+} */
+
+#row{
+    width:1000px;
+    height:40px;
+    display:block;
+}
+#row p{
+    /* border:1px black solid; */
+    display:inline-block;
+    vertical-align: middle;
+
+}
+
+#blue{
+    background:blue;
+    box-shadow:0px 0px 0px 1.5px black inset;
+
+}
+#red{
+    background:palevioletred;
+    box-shadow:0px 0px 0px 1.5px black inset;
+
+}
+#yellow {
+    background:gold;
+    box-shadow:0px 0px 0px 1.5px black inset;
+
+}
+#green {
+    background:lime;
+    box-shadow:0px 0px 0px 1.5px black inset;
+
+}

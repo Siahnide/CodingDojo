@@ -1,0 +1,118 @@
+*{
+    padding:0px;
+    margin:10px;
+    display:inline-block;
+    color:white;
+    vertical-align: top;
+}
+p{
+    
+}
+span{
+    color:skyblue;
+    font-size: 15px;
+}
+
+#background{
+    height:860px;
+    width:970px;
+    background:whitesmoke
+}
+#head{
+    background:teal;
+    width:950px;
+    height:60px;
+}
+#head img{
+    margin:0px;
+    height:60px;
+    width:60px;
+}
+#head h1{
+    color:black;
+font-size:30px;
+    margin-left:0px;
+    margin-right:100px;
+    vertical-align: middle;
+}
+#head a{
+    margin-top:20px;
+    margin-left:30px;
+}
+    #block{
+        height:680px;
+        width:950px;
+        background:yellow;
+    }
+        #block p{
+            font-size:24px;
+            width:200px;
+        }
+        
+        #block h1{
+            background:rgb(1, 66, 26);
+            font-size:16px;
+        }
+        #WhatisGit{
+            height:640px;
+            width:200px;
+            margin-left:15px;
+            text-align:left;
+            
+        }
+        #ThisisGit{
+            width:690px;
+            height:640px;
+        }
+        h1{
+            font-size: 15px;
+
+        }
+            
+        
+        #threeblocks{
+            margin-left:15px;
+            margin-right:15px;
+            width:190px;
+            height:200px;
+        }
+        #twoblocks{
+            margin-left:15px;
+            margin-right:15px;
+            width:303px;
+            height:200px;
+            
+        }
+        #twoblocks p{
+            width:280px;
+        }
+        #oneblock{
+            margin-left:15px;
+            margin-right:15px;
+            margin-bottom:15px;
+            width:640px;
+            height:190px;
+            
+        }
+            #oneblock p{
+                width:640px;
+            }
+        #foot{
+            background:rgb(0, 114, 114);
+            color:black;
+            margin:10px;
+            width:950px;
+            height:60px;
+        }
+            #foot p{
+                font-size:16px;
+                color:black;
+                height:60px;
+                width:600px;
+                margin-left:300px;
+                margin-right:300px;
+                vertical-align: middle;
+            } 
+            #foot a{
+                font-size: 16px;
+            }       

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+
+    </head>
+    <script>
+        $(document).ready(function(){
+
+            $.get('https://anapioficeandfire.com/api/houses',function(res){
+                $(document).on('click','img',function(){
+                    console.log(res)
+                    console.log($(this).attr('src')-'.jpg')
+                    for(var i=0;i<400;i++){
+                        var x = res.houses.name+i
+                        if(x='lannister'){
+                            console.log(x)
+                        }
+                    }
+                })
+            },'json')
+        });
+    </script>
+    <body>
+<img id="" src="baratheon.png">
+<img src="lannister.jpg">
+<img src="stark.jpg">
+<img id="378" src="targaryen.jpg">
+<h2>House Details</h2>
+<h1 id="HouseDetails">
+    <p id="Name">Name:
+        <p>stuff</p>
+    </p>
+    <p id="Words">Words:
+        <p>stuff</p>
+    </p>
+    <p id="Titles">Titles:
+        <p>stuff</p>
+    </p>
+</h1>
+    </body>
+</html>

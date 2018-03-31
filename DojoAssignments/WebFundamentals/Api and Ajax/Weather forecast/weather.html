@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+    </head>
+    <script>
+       $(document).ready(function() {
+    $('form').submit(function() {
+        var city =$('#city').val()
+        $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&&appid=5639bcf5e48518269b45fac3d24632b7", function(res) {
+            var temperature = Math.floor(res.main.temp*9/5 -459.67);
+            var html_str = "<h1>"+city+"</h1>"
+            html_str += "<p>Temperature:"+temperature+"</p>"
+            $('form').append(html_str)
+        },'json')     
+            return false;
+    });
+});
+    </script>
+    <body>
+        <h2>Enter a city or state to find the temperature!</h2>
+        <form>
+            <input type="text" id="city">
+            <input type="submit" id="submit">
+            <h1 id="city"></h1>
+            <p id="temperature"></p>
+        </form>
+    </body>
+</html>

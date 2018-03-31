@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+
+    </head>
+    <script>
+        $(document).ready(function(){
+            var score = 0, life=3, count =0
+            var world = {
+                    pos:[
+                        [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+                        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+                        [1,0,3,0,0,0,3,0,0,0,0,0,0,0,3,0,1],
+                        [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+                        [1,0,0,2,1,1,1,2,0,2,0,0,2,0,0,0,1],
+                        [1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,1],
+                        [1,0,0,1,1,1,1,1,0,2,0,0,0,0,0,0,1],
+                        [1,0,1,0,0,0,0,3,3,0,0,0,0,1,1,0,1],
+                        [1,0,1,0,2,0,0,2,0,0,0,0,0,1,3,0,1],
+                        [1,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1],
+                        [1,0,1,2,1,1,1,1,1,0,0,0,0,0,1,0,1],
+                        [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+                        ],
+                    def:{
+                        2:'blank',
+                        1:'wall',
+                        0:'bit',
+                        3:'cherry'
+                        }
+                }
+            var pacman = {
+                pos:{
+                    x:1,
+                    y:1
+                },
+                facing:{
+                    left:0+'deg',
+                    right:180+'deg',
+                    up:90+'deg',
+                    down:-90+'deg'
+                }
+            }
+            var ghost = {
+                pos:{
+                    x:7,
+                    y:6
+                },
+                facing:{
+                    left:0+'deg',
+                    right:180+'deg',
+                    up:90+'deg',
+                    down:-90+'deg'
+                }
+            }
+            var ghost2 = {
+                pos:{
+                    x:3,
+                    y:9
+                },
+                facing:{
+                    left:0+'deg',
+                    right:180+'deg',
+                    up:90+'deg',
+                    down:-90+'deg'
+                }
+            }
+            var worlddef = {
+                0:'blank',
+                1:'wall',
+                2:'bit'
+            }
+            var direction = ""
+    
+            function defWorld(){
+                var world_str =""
+                for (var i=0;i<world.pos.length;i++){
+                    world_str +="\n<div class='row'>"
+                    for (var j=0;j<world.pos[i].length;j++){
+                        world_str += "\n\t<div class=" +world.def[world.pos[i][j]]+ "></div>"
+                    }
+                    world_str += "\n</div>"
+                }
+                document.getElementById('world').innerHTML = world_str;
+            }
+            function defPacman() {
+                pacman_str = "<div id='pacman'></div>"
+                document.getElementById('player').innerHTML = pacman_str;
+                document.getElementById('pacman').style.top = pacman.pos.y * 30 + 'px';
+                document.getElementById('pacman').style.left = pacman.pos.x * 30 + 'px' ;
+                document.getElementById('pacman').style.transform = "rotate("+direction+")"
+
+
+            }
+            function defGhost() {
+                ghost_str = "<div id='ghost'></div>"
+                document.getElementById('enemy').innerHTML = ghost_str;
+                document.getElementById('ghost').style.top = ghost.pos.y * 30 + 'px';
+                document.getElementById('ghost').style.left = ghost.pos.x * 30 + 'px';
+            }
+            function defGhost2() {
+                ghost2_str = "<div id='ghost2'></div>"
+                document.getElementById('enemy2').innerHTML = ghost2_str;
+                document.getElementById('ghost2').style.top = ghost2.pos.y * 30 + 'px';
+                document.getElementById('ghost2').style.left = ghost2.pos.x * 30 + 'px';
+            }
+
+
+            function update(world_str){
+            defPacman()
+            defWorld()
+            defGhost()
+            defGhost2()
+            defCollision()
+            // movePacman(direction)
+            }
+            function ghostMove(){
+                    count= Math.ceil(Math.random() * 4)
+                    if(world.def[world.pos[ghost.pos.y-1][ghost.pos.x]]!='wall' && count ==1){
+                        ghost.pos.y--;
+                        update()
+                            }
+                    
+                    else if(world.def[world.pos[ghost.pos.y][ghost.pos.x+1]]!='wall' && count ==3){
+                        ghost.pos.x++;
+                        update()
+                    }
+                    
+                    else if(world.def[world.pos[ghost.pos.y+1][ghost.pos.x]]!='wall' && count ==2){
+                        ghost.pos.y++;
+                        update()
+                    }
+                    
+                    else if(world.def[world.pos[ghost.pos.y][ghost.pos.x-1]]!='wall' && count ==4){
+                        ghost.pos.x--;
+                        update()
+                    }
+                    if(count==5){
+                        count=0
+                    }
+            }
+            function ghostMove2(){
+                    count= Math.ceil(Math.random() * 4)
+                    if(world.def[world.pos[ghost2.pos.y-1][ghost2.pos.x]]!='wall' && count ==1){
+                        ghost2.pos.y--;
+                        update()
+                            }
+                    
+                    else if(world.def[world.pos[ghost2.pos.y][ghost2.pos.x+1]]!='wall' && count ==3){
+                        ghost2.pos.x++;
+                        update()
+                    }
+                    
+                    else if(world.def[world.pos[ghost2.pos.y+1][ghost2.pos.x]]!='wall' && count ==2){
+                        ghost2.pos.y++;
+                        update()
+                    }
+                    
+                    else if(world.def[world.pos[ghost2.pos.y][ghost2.pos.x-1]]!='wall' && count ==4){
+                        ghost2.pos.x--;
+                        update()
+                    }
+                    if(count==5){
+                        count=0
+                    }
+            }
+
+            document.onkeydown = function(e){
+                console.log(e.keyCode)
+                switch (event.which){
+                    case 13: //enter
+                    START()
+                    setInterval(update,100)
+                    setInterval(ghostMove,200)
+                    setInterval(ghostMove2,150)
+                    break;
+                    case 87: //w up
+                    direction=pacman.facing.up
+                    if(world.def[world.pos[pacman.pos.y-1][pacman.pos.x]]!='wall'){
+                    pacman.pos.y--;
+                        document.getElementById('pacman').style.transform = "rotate("+direction+")"
+
+                    }
+                    break;
+
+                    case 68: //d right
+                    direction=pacman.facing.right
+                    if(world.def[world.pos[pacman.pos.y][pacman.pos.x+1]]!='wall'){
+                        pacman.pos.x++;
+                        document.getElementById('pacman').style.transform = "rotate("+direction+")"
+
+                    }
+                    break;
+
+                    case 83: //s down
+                    direction=pacman.facing.down
+                    if(world.def[world.pos[pacman.pos.y+1][pacman.pos.x]]!='wall'){
+                        pacman.pos.y++;
+                        document.getElementById('pacman').style.transform = "rotate("+direction+")"
+
+                    }
+                    break;
+
+                    case 65: //a left
+                    direction=pacman.facing.left
+                    if(world.def[world.pos[pacman.pos.y][pacman.pos.x-1]]!='wall'){
+                        pacman.pos.x--;
+                        document.getElementById('pacman').style.transform = "rotate("+direction+")"
+
+                    }
+                    
+                    
+
+
+                }
+            }
+                    
+        function defCollision(){
+            if (world.def[world.pos[pacman.pos.y][pacman.pos.x]]=='bit'){
+                score += 10;
+                world.pos[pacman.pos.y][pacman.pos.x] = 2
+                document.getElementById('score').innerHTML = score
+            }
+            if (world.def[world.pos[pacman.pos.y][pacman.pos.x]]=='cherry'){
+                score += 50;
+                world.pos[pacman.pos.y][pacman.pos.x] = 2
+                document.getElementById('score').innerHTML = score
+            }
+            if(pacman.pos.x == ghost.pos.x && pacman.pos.y == ghost.pos.y ){
+                pacman.pos.x = 1
+                pacman.pos.y = 1
+                document.getElementById("L"+life+"").style.height = 0+"px";
+                life--;
+                console.log("Hello")
+                if(life==0){
+                    location.reload()
+                }
+            }
+            if(pacman.pos.x == ghost2.pos.x && pacman.pos.y == ghost2.pos.y ){
+                pacman.pos.x = 1
+                pacman.pos.y = 1
+                document.getElementById("L"+life+"").style.height = 0+"px";
+                life--;
+                console.log("Hello")
+                if(life==0){
+                    location.reload()
+                }
+            }
+            
+        }
+        function START(){
+            $('body').append("<div id='score'></div><div id='lives'><div id='L1'></div><div id='L2'></div><div id='L3'></div></div>")
+        }
+                        
+        
+            
+          
+        });
+    </script>
+    <body>
+        <div id="world">
+            <h2>PACMAN</h2>
+            <h1> Hit Enter To Start!</h1>
+            <p>By Josiah Savage</p>
+        </div>
+        <div id="player"></div>
+        <div id="enemy"></div>
+        <div id="enemy2"></div>
+      
+   
+    </body>
+</html>

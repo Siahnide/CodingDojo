@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <script>
+        $(document).ready(function(){
+            for(var i =1;i<=151;i++){
+                var png = "http://pokeapi.co/media/img/"+i+".png"
+                $('#pokemon').append('<img id="'+i+'" src="'+png+'"></img>')
+            }
+            $('img').on('click',function(){
+                var chosen = $(this).attr('id');
+                console.log("loading...")
+                $.get("https://pokeapi.co/api/v2/pokemon/"+chosen+"/",function(res){
+                console.log("Ready")
+
+                    //set Box name
+                    var html_name = res.name
+                    console.log(html_name)
+                    $('#Nameset').html(""+html_name+"")
+                    
+                    //set Box img
+                    var html_img = "http://pokeapi.co/media/img/"+chosen+".png"
+                    $('#Boxpokemon').attr('src',""+html_img+"")
+
+                    //Typeset
+                    var html_types = "";
+                        html_types += "<h3>Types</h3>"
+                        html_types += "<ul>"
+                    for (var x=0;x<res.types.length;x++){
+                        html_types += "<li>"+res.types[x].type.name+"</li>"
+                        console.log(res.types[x].type.name);
+
+                    }
+                        html_types += "</ul>";
+                        $('#Typeset').html(""+html_types+"")
+
+
+                    //Heightset
+                    var html_height = "";
+                        html_height += "<h3>Height</h3>"
+                        html_height += "<p2>"+res.height+"ft</p2>"
+                        console.log(res.height);
+                        $('#Heightset').html(""+html_height+"") 
+
+                    //Weightset
+                    var html_weight = "";
+                        html_weight += "<h3>Weight</h3>"
+                        html_weight += "<p2>"+res.weight+"lbs</p2>"
+                        console.log(res.weight);
+                        $('#Weightset').html(""+html_weight+"") 
+
+
+                });
+                
+                
+            })
+        });
+    </script>
+    <body>
+        <div id="pokemon">
+
+        </div>
+
+        <div id="box">
+            <h1 id="Nameset"></h1>
+            <img id="Boxpokemon" >
+            
+            <ul id="Typeset">
+
+            </ul>    
+                
+           
+            <h3 id=Heightset>
+                <p></p>
+            </h3>    
+
+            <h3 id=Weightset>
+                <p></p>
+            </h3>    
+        </div>    
+
+    </body>
+</html>
+<!-- .'$.get("https://pokeapi.co/api/v2/pokemon/1/"' -->
+
+
+
+
+
+
+
+
+
+
+

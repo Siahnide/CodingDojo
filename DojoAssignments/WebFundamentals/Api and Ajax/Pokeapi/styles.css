@@ -1,0 +1,57 @@
+#pokemon{
+    width:675px;
+    height:1000px;
+    position:absolute
+}
+img{
+    display:inline-block;
+    border:1px black solid;
+    height:125px;
+    width:125px;
+    margin-bottom:-5px;
+    line-break: 0px;
+
+}
+#box{
+    left:675px;
+    padding:40px;
+    padding-top:0px;
+    padding-left:20px;
+    text-align: center;
+    vertical-align: top;
+    height:420px;
+    width:120px;
+    border:5px black solid;
+    border-bottom:10px black solid;
+    position: fixed;
+    overflow: hidden;
+}
+
+    #box p{}
+
+    #box h3{
+        text-align: left;
+    }
+    #box p2{
+        text-align: left;
+        font-size:16px;
+    }
+        #Typeset{
+        text-align: left;
+        padding:0px;
+    }
+        #Heightset h3{
+        text-align: left;
+        padding:0px;
+        margin:0px;
+    }
+        #Heightset h3 h3{
+        text-align: left;
+        padding:0px;
+        margin:0px;
+    }
+        #WeightSet h3{
+        text-align: left;
+        padding:0px;
+        margin:0px;
+    }

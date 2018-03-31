@@ -1,12 +1,36 @@
 <html>
 <head>
 	<title>Javascript Box - OOP demo</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
 	<svg id="svg" xmlns="http://www.w3.org/2000/svg"></svg>
 
 	<script>
+			var time_pressed = 0
+			var arr =[]
+		
+
+
+			function getTime(){
+				var date = new Date();
+				return date.getTime();
+			}
+
+			document.onmousedown = function(e){
+				mousedown_time = getTime();
+			}
+			document.onmouseup = function(e){
+				time_pressed = getTime() - mousedown_time;
+				console.log('You held your mouse down for', time_pressed, 'miliseconds.');
+			time_pressed *= 1/50
+			console.log(time_pressed)
+			
+
+//technically we don't even need the mousedown variable but we're leaving it there for now..
+
+}
 	function Circle(cx, cy, html_id)
 	{
 		var html_id = html_id;
@@ -16,6 +40,8 @@
 		var randomNumberBetween = function(min, max){
 			return Math.random()*(max-min) + min;
 		}
+
+
 
 		this.initialize = function(){
 			//give a random velocity for the circle
@@ -28,30 +54,45 @@
 			var circle = makeSVG('circle', 
 				{ 	cx: this.info.cx,
 				  	cy: this.info.cy,
-				  	r:  10,
+				  	r:  ""+time_pressed+"",
 				  	id: html_id,
 				  	style: "fill: black"
 				});
-
 			document.getElementById('svg').appendChild(circle);
+			arr.push(circle)
+			console.log(arr)
+			
 		}
 
+			var count = 0
 		this.update = function(time){
 			var el = document.getElementById(html_id);
-
+			count++;
+			// console.log(count)
 			//see if the circle is going outside the browser. if it is, reverse the velocity
-			if( this.info.cx > document.body.clientWidth || this.info.cx < 0)
+			if( this.info.cx > document.body.clientWidth-25 || this.info.cx < 10)
 			{
 				this.info.velocity.x = this.info.velocity.x * -1;
 			}
-			if( this.info.cy > document.body.clientHeight || this.info.cy < 0)
+			if( this.info.cy > document.body.clientHeight-15 || this.info.cy < 10)
 			{
 				this.info.velocity.y = this.info.velocity.y * -1;
 			}
-
+			if(count > arr.length){
+				count=0
+			}
+			// if (
+			// 	arr[count].attributes.cy.value == arr[count-1].attributes.cy.value && 
+			// 	arr[count].attributes.cx.value == arr[arr.length-count].attributes.cx.value ||
+			// 	arr[count].attributes.cy.value == arr[arr.length-count].attributes.cy.value && 
+			// 	arr[count].attributes.cx.value == arr[arr.length-count].attributes.cx.value
+			// 	){
+			// 		console.log("boop")
+			// 	}
+			
+			
 			this.info.cx = this.info.cx + this.info.velocity.x*time;
 			this.info.cy = this.info.cy + this.info.velocity.y*time;
-
 			el.setAttribute("cx", this.info.cx);
 			el.setAttribute("cy", this.info.cy);
 		}
@@ -68,6 +109,7 @@
 
 	    this.initialize();
 	}
+	
 
 	function PlayGround()
 	{

@@ -1,0 +1,21 @@
+img{
+    display:inline-block;
+    margin-left:2%;
+    width:20%;
+    height:40%;
+}
+h2{
+    margin:0px;
+    margin-top:20px;
+}
+#HouseDetails{
+    margin:0px;
+    border:1px black solid;
+    width: 300px;
+    height:150px;
+    display:inline-block
+}
+
+#HouseDetails p{
+    font-size:30%;
+}
