@@ -1,0 +1,54 @@
+*{
+    margin:0px;
+}
+#map{
+    background:green;
+    display:inline-block;
+    margin:0px;
+    margin-top:3px;
+}
+    .row{
+        margin-bottom:-5px;
+    }
+    .wall{
+        background:black;
+        height:30px;
+        width:30px;
+        display:inline-block;
+        margin:0px -2.5px 0px -2.5px;
+    }
+    .blank{
+        background:whitesmoke;
+        height:28px;
+        width:28px;
+        display:inline-block;
+        border:1px black solid;
+        margin:0px -2.5px 0px -2.5px;
+    }
+    .space{
+        height:20px;
+        width:20px;
+        display:inline-block;
+        margin:0px -2.5px 0px -2.5px;
+    }
+
+
+    #BlueK {
+        width: 30px;
+        height: 30px;
+        margin:0px;
+        padding:0px;
+    
+        position:absolute;
+    }
+
+    #GreenK {
+        width: 18px;
+        height: 28px;
+        margin:1px 6px 1px 6px;
+        position:absolute;
+
+    }
+
+
+    

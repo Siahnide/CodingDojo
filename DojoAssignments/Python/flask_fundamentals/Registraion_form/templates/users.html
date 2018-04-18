@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles.css') }}">
+    </head>
+    <div id="card">
+    <h1>Submitted Info</h1>
+    <div class="info">
+        <p>Name:</p>
+        <p>{{firstname}} {{lastname}}</p>
+    </div>
+    <div class="info">
+        <p>Email:</p>
+        <p>{{email}}</p>
+    </div>
+    
+    <form action='/'>
+        <input type="submit">
+    </form>
+    </div>
+    

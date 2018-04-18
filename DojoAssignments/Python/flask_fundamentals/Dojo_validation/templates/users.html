@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='3.css') }}">
+</head>
+<div id="card">
+<h1>Submitted Info</h1>
+<div class="info">
+    <p>Name:</p>
+    <p>{{name}}</p>
+</div>
+<div class="info">
+    <p>Dojo Location:</p>
+    <p>{{location}}</p>
+</div>
+<div class="info">
+    <p>Favorite Language:</p>
+    <p>{{language}}</p>
+</div>
+<div class="info">
+    <p>Comment:</p>
+    <p>{{comment}}</p>
+</div>        
+
+<form action='/'>
+    <input type="submit">
+</form>
+</div>
+
+

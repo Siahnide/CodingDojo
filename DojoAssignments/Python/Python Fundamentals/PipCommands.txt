@@ -1,0 +1,14 @@
+pip install Django==1.11.9
+	This installed the Django program and all it's files. the install searches for the inputed  option, and installs a version if inputed.
+pip list
+	This diplays installed packages.
+
+pip freeze 
+	Similar to list, this also displayed installed packages, but instead outputs them in requirements format.
+
+pip uninstall Django
+	This Uninstalled all current versions of Django installed.
+pip show Django
+	This showed nothing, since Django was uninstalled. Normally it would show the version that was installed.
+pip search Flask. 
+	This Searched the web for every instance of downloadable packages with Flask in the name or description.
