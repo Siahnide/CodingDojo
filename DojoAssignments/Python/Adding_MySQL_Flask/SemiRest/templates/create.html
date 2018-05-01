@@ -1,0 +1,15 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles2.css')}}">
+</head>
+
+
+<h1>Add a new user</h1>
+<form action="/try" method="post" id="d">
+    First Name:<input type="text" name="first_name">
+    Last Name:<input type="text" name="last_name">
+    Email:<input type="text" name="email">
+    <input type="submit" value="Create">
+</form>
+<form action='/' method="GET">
+    <input type="submit" value="Go Back">
+</form>

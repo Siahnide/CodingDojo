@@ -1,0 +1,16 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles2.css')}}">
+</head>
+
+
+<h1>Add a new user</h1>
+<form action="/tryedit" method="post" id="d">
+    <input type="hidden" value="{{user[0]['id']}}" name="id">
+    First Name:<input type="text" name="first_name" value="{{user[0]['first_name']}}">
+    Last Name:<input type="text" name="last_name" value="{{user[0]['last_name']}}">
+    Email:<input type="text" name="email" value="{{user[0]['email']}}">
+    <input type="submit" value="Change">
+</form>
+<form action='/' method="GET">
+    <input type="submit" value="Go Back">
+</form>

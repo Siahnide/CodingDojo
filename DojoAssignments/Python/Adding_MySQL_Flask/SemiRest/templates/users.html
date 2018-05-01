@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles2.css')}}">
+</head>
+
+<h1>USER {{user[0]["id"]}}</h1>
+<p id="a">Full Name: {{user[0]["first_name"]}} {{user[0]["last_name"]}}
+
+</p>
+<p id="a">email:{{user[0]["email"]}}
+
+</p>
+<p id="a">Created At:{{user[0]["created_at"]}}
+
+</p>
+<div id="c">
+    <form action="/edit" method="POST" id="b">
+        <input type="hidden" value= "{{user[0]['id']}}" name="id">
+        <input type="submit" value="Edit">
+    </form>
+
+    <form action="/delete" method="POST" id="b">
+        <input type="hidden" value= "{{user[0]['id']}}" name="id">
+        <input type="submit" value="Delete">
+    </form>
+</div>

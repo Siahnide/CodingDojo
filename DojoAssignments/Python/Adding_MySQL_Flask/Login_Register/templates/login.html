@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles.css')}}">
+</head>
+
+<h1>Login</h1>
+
+
+
+<form action="/try" method="post">
+    <p><div id="one">Email:</div> <input type="text" name="email"> </p>
+    <p><div id="one">Password:</div> <input type="text" name="password"> </p>
+    <input type='submit' value="Log in">
+
+</form>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<form id="log" action="/create" method='post'>
+    <p>Don't have an account? Register here!</p>
+    <input type='submit' value="Register">
+</form>

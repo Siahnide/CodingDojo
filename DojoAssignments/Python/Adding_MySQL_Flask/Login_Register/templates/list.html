@@ -1,0 +1,22 @@
+{{data}}
+<hr>
+<h3>Currently Registered Users</h3>
+<hr>
+
+
+
+{% for user in all_users %}
+<p>[{{ user['id'] }}]
+{{ user['first_name'] }}
+{{ user['last_name'] }}
+{{ user['email'] }}
+{{password}}
+</p>
+<hr>
+{% endfor %}
+
+<h4>Active User: {{session["active_user"]}}</h4>
+<p>Care to register another account?</p>
+<form id="log" action="/create" method='post'>
+    <input type='submit' value="Register Here!">
+</form>

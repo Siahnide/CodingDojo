@@ -1,0 +1,21 @@
+
+
+#create p{
+    width:500px
+}
+#one{
+    display:inline-block;
+    width:80px;
+}
+#two{
+    display:inline-block;
+    width:80px;
+    font-size: 14px;
+}
+#sub{
+    margin-left:85px;
+}
+
+#log{
+    margin-top:200px;
+}

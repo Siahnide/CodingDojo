@@ -1,0 +1,7 @@
+mysql -u root -p
+<the password I set>
+
+{in t mysql}
+{created a test database}
+{created new query}
+	USE test

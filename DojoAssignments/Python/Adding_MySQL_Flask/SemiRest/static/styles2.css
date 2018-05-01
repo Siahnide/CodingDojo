@@ -1,0 +1,140 @@
+*{
+    margin:2px;
+    margin-right:-9.5px;
+    margin-bottom:0px;
+    text-align: center;
+    display:block;
+    overflow: hidden;
+    
+    
+}
+
+#users{
+    text-align:center;
+}
+#d{
+    text-align:left;
+}
+#d input{
+    border:1px solid black;
+    margin-bottom:5px;
+}
+#id{
+    width:30px;
+    height:30px;
+    display:inline-block;
+    border:3px black solid;
+
+}
+
+    #id p{
+        height:30px;
+        width:30px;
+        display:inline-block;
+    }
+#name{
+    width:120px;
+    height:30px;
+    display:inline-block;
+    border:3px black solid;
+
+}
+
+    #name p{
+        height:30px;
+        width:120px;
+        display:inline-block;
+    }
+#email{
+    width:180px;
+    height:30px;
+    display:inline-block;
+    border:3px black solid;
+
+}
+
+    #email p{
+        height:30px;
+        width:180px;
+        display:inline-block;
+    }
+#created{
+    width:150px;
+    height:30px;
+    display:inline-block;
+    border:3px black solid;
+
+}
+
+    #created p{
+        height:30px;
+        width:150px;
+        display:inline-block;
+    }
+#action{
+    width:150px;
+    height:30px;
+    display:inline-block;
+    border:3px black solid;
+    text-align: left;
+
+}
+
+    #action p{
+        height:30px;
+        width:150px;
+        display:inline-block;
+    }
+    #action form{
+        width:40px;
+        display:inline-block;
+    }
+    #action form input{
+        border:0px;
+        margin-right:5px;
+        color:blue;
+        text-decoration: underline solid blue;
+        width:40px;
+        display:inline-block;
+    }
+form input{
+    border:0px;
+    color:blue;
+    text-decoration: underline solid blue;
+    width:100px;
+}
+
+h1{
+    text-align: left;
+    margin-top:50px;
+    margin-bottom:30px;
+}
+#a{
+    display:block;
+    text-align: left;
+
+}
+#b{
+    
+    display:inline-block;
+    text-align: left;
+    width:30px;
+    margin-right:10px;
+
+
+}
+
+
+#b input{
+    display:inline-block;
+    border:0px;
+    width:30px;
+    text-align: left;
+    color:blue;
+    text-decoration: underline solid blue;
+    width:100px;
+}
+#c{
+    text-align: left;
+    display:block;
+} 

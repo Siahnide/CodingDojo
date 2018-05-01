@@ -1,0 +1,13 @@
+NameError: global name 'd' is not defined
+	We need to use a database name that is called in the __init__ function.
+
+
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'me'@'localhost' (using password: YES)") (Background on this error at: http://sqlalche.me/e/e3q8)
+	We need to use the user 'localhost'.
+
+OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)") (Background on this error at: http://sqlalche.me/e/e3q8)
+
+	We need to use the correct password.
+
+OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (10061)") (Background on this error at: http://sqlalche.me/e/e3q8)
+	We need to use the correct port.

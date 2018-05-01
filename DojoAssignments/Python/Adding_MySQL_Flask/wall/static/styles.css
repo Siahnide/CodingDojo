@@ -1,0 +1,80 @@
+*{
+    position: static;
+}
+#header{
+    width: 100%;
+    height:60px;
+    border:black 3px solid;
+}
+    #header h1{
+        display:inline-block;
+        width:300px;
+        margin:10px;
+    }
+    #header p{
+        margin-left:250px;
+        display:inline-block;
+    }
+    #header form{
+        display:inline-block;
+    }
+        #header form input{
+            display:inline-block;
+            border: 0px;
+            background: transparent;
+            color: blue;
+            text-underline-position: below;
+            width:40px;
+            margin:5px;
+            
+        }
+#body{
+    margin:20px 120px 30px 120px;
+}
+
+#postmsg{
+    width:100%
+}
+
+    #postmsg form{
+        width:100%;      
+    }
+    #postmsg form input{
+        width: 100%;
+        height:60px;
+        overflow: scroll;
+    }
+    #postmsg form #submitmsg{
+        overflow: hidden;
+        margin-top:5px;
+        margin-left:77%;
+        width: 120px;
+        height: unset;
+        color:white;
+        background: royalblue;
+        box-shadow: 3px 5px black;
+        border: 3px black solid;
+    }
+#message{
+    margin-bottom:20px;
+    width:100%
+}
+    #message form{
+        width:100%;      
+    }
+    #message form input{
+        width: 100%;
+        height:60px;
+        overflow: scroll;
+    }
+    #message form #submitcomment{
+        overflow: hidden;
+        margin-top:5px;
+        margin-left:77%;
+        width: 120px;
+        height: unset;
+        color:white;
+        background: green;
+        box-shadow: 3px 5px black;
+        border: 3px black solid;
+    }
