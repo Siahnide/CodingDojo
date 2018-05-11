@@ -1,0 +1,20 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'form/css/main.css' %}">
+</head>
+
+<div id="container">
+    <form action="/process" method="post">
+        {% csrf_token %}
+        <div id="input">Your Name:<input type="text" name="fullname"></div>
+        <div id="input">Dojo Location:<input type="text" name="location"></div>
+        <div id="input">Favorite Language:<input type="text" name="language"></div>
+        <div id="input">Comment (optional):<textarea name="comment"></textarea></div>
+        <div id="input"><input id="submit" type="submit" value="submit"></div>
+
+    
+    </form>
+
+
+
+</div>

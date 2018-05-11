@@ -1,0 +1,41 @@
+*{
+    text-align: center;
+    
+}
+
+#Fighter{
+    background:transparent;
+    background-image: url('../img/BlueK/stepright1.png');
+    background-size: 30%; 
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: middle;
+    height:120px;
+    width:100%;
+    display:inline-block;
+    text-align: unset;
+}
+#Rogue{
+    background:transparent;
+    background-image: url('../img/GreenK/stepright1.png');
+    background-size: 30%; 
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: middle;
+    height:120px;
+    width:100%;
+    display:inline-block;
+    text-align: unset;
+}
+
+#choice{
+    width:500px;
+    height:200px;
+    border:1px black solid;
+    display:inline-block;
+    
+}
+    #choice form{
+        display:inline-block;
+        width:23%;
+    }

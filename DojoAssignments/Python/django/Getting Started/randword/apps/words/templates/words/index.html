@@ -1,0 +1,9 @@
+<form action ="/" method = "POST">
+    {% csrf_token %}
+    <input type="submit" name="reset" value="Generate">
+
+</form>
+<p> Attempt # {{request.session.times}}</p>
+<h1 id="time">
+    {{word}}
+</h1>

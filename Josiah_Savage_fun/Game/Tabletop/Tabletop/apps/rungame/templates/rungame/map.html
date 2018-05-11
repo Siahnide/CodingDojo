@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'rungame/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+    </head>
+    <script>
+        $(document).ready(function(){
+            var x=1,y=1,x2=2,y2=2
+            var ap = 1
+            var moves1=7,moves2=4
+            var terrain=[
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0],
+                [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+
+                ]
+                var tile = {
+                    0:'wall',
+                    1:'blank',
+                    2:'greenK',
+                    3:'redK'
+                }
+
+            function drawWorld(){
+                var generate = ""
+             
+                for (var row=0;row<terrain.length;row++){
+                    // $('#terrain').append('<div class="x"></div>')
+                    generate += "<div class = 'row'>"
+                    for(var x=0;x<terrain[row].length;x++){
+                      generate += "<div class = " + tile[terrain[row][x]] +"></div>"
+                    }
+                    generate +="</div>"
+                }
+                document.getElementById("world").innerHTML = generate;
+                document.getElementById("world").style.width = terrain[0].length *40 + "px";
+                document.getElementById("world").style.height = terrain.length *40 + "px";
+            }
+            stuff = "{{ phrase }}";
+            console.log(stuff)
+            drawWorld()
+        });
+    </script>
+    <body>
+       <div id="world">
+           
+       </div>
+       <div id='alert'></div>
+       <div id='moves'></div>
+       <div>
+        {% for players in request.session.list %}
+            
+            {{request.session.list.players}}
+        {% endfor %}
+    </div>
+    </body>
+</html>
+
+
+
+
+<!-- function players(x,y,ap,x2,y2){
+    if(ap==2){player1(x,y,ap,x2,y2)}
+    else if(ap==3){player2(x,y,ap,x2,y2)}
+    function player1 (x,y,ap,x2,y2) {
+        terrain[y][x] = ap
+        document.getElementById('moves').innerHTML = moves1;
+        if(moves1<1){
+            moves2=4
+            ap=3
+            player2(x,y,ap,x2,y2)
+        }
+        
+        $('#alert').html('<h1>Player1</h1>')
+        drawWorld()
+    }
+    function player2 (x,y,ap,x2,y2) {
+        terrain[y2][x2] = ap
+        document.getElementById('moves').innerHTML = moves2;
+        if(moves2<1){
+            moves1=7
+            ap=2
+            player1(x,y,ap,x2,y2)
+        }
+        $('#alert').html('<h1>Player2</h1>')
+        drawWorld()
+    }
+}
+
+
+document.onkeydown = function(event) {
+    switch (event.which) {
+        case 49://1 player1
+            if(moves1 > 0){
+            ap = 2
+            moves1 = 7
+            $('#alert').html('<h1>Player1</h1>')
+            document.getElementById('moves').innerHTML = moves1;
+            players(x,y,ap,x2,y2)
+            }
+            break;
+
+            case 50: //2 player2
+            if (moves2 > 0 ){
+            ap = 3
+            moves2 = 4
+            $('#alert').html('<h1>Player2</h1>')
+            document.getElementById('moves').innerHTML = moves2;
+            players(x,y,ap,x2,y2)
+            }
+            break;
+
+        case 32:
+
+        case 87: //W up
+            if(ap==2){
+                if(terrain[y-1][x] == 1 && moves1 > 0){
+                    y--;
+                    terrain[y+1][x] = 1
+                    moves1--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+            else if(ap==3){
+                if(terrain[y2-1][x2] == 1 && moves2 > 0){
+                    y2--;
+                    terrain[y2+1][x2] = 1
+                    moves2--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+        
+            break;
+        case 65: // A left
+            
+            if(ap==2){
+                if(terrain[y][x-1] == 1 && moves1 > 0){
+                    x--;
+                    terrain[y][x+1] = 1
+                    moves1--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+            else if(ap==3){
+                if(terrain[y2][x2-1] == 1 && moves2 > 0){
+                    x2--;
+                    terrain[y2][x2+1] = 1
+                    moves2--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+        
+            break;
+        case 68: // D right
+            
+            if(ap==2){
+                if(terrain[y][x+1] == 1 && moves1 > 0){
+                    x++;
+                    terrain[y][x-1] = 1
+                    moves1--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+            else if(ap==3){
+                if(terrain[y2][x2+1] == 1 && moves2 > 0){
+                    x2++;
+                    terrain[y2][x2-1] = 1
+                    moves2--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+            
+            break;
+        case 83: // s down
+            
+            if(ap==2){
+                if(terrain[y+1][x] == 1 && moves1 > 0){
+                    y++;
+                    terrain[y-1][x] = 1
+                    moves1--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+            else if(ap==3){
+                if(terrain[y2+1][x2] == 1 && moves2 > 0){
+                    y2++;
+                    terrain[y2-1][x2] = 1
+                    moves2--;
+                }
+                players(x,y,ap,x2,y2)
+            }
+        
+            break;
+        }
+}   
+
+
+
+
+
+players(x,y,ap,x2,y2) -->

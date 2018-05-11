@@ -1,0 +1,15 @@
+<head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'form/css/main.css' %}">    
+</head>
+
+<div id="container">
+<div id="input">Name: {{request.session.fullname}}</div>
+<div id="input">Dojo Location: {{request.session.location}}</div>
+<div id="input">Favorite Language: {{request.session.language}}</div>
+<div id="input">Comment (optional): {{request.session.comment}}</div>
+</div>
+<form action="/" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Go back">
+</form>

@@ -1,0 +1,11 @@
+
+
+<form action ="/" method = "post">
+    {% csrf_token %}
+    <input type="submit" name="reset" value="The current time and date">
+
+</form>
+
+<h1 id="time">
+    {{time}}
+</h1>

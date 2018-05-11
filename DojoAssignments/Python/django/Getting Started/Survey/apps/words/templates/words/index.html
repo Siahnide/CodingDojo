@@ -1,0 +1,37 @@
+<head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'words/css/main.css' %}">
+</head>
+<div id="container">
+    <h1>Add a new word</h1>
+    <form action="/words/process" method="post">
+        {% csrf_token %}
+        <div id="input"><input type="text" name="word"></div>
+        <div id="input">
+            <input type="radio" name="color" value="red" checked>Red<br>
+            <input type="radio" name="color" value="green">Green<br>
+            <input type="radio" name="color" value="blue">Blue<br>
+        </div>
+        <div id="input"> 
+            <input type="checkbox" name="size" value="big"> Big Font<br>
+        </div>
+        <div id="input"><input type="submit" id="add" value="Add to session"></div>
+
+    </form>
+</div>
+
+
+<!-- middle -->
+
+<div id="container">
+    <form action="/words/clear" method="post">
+        {% csrf_token %}
+        <input type="submit" id="clear" value="Clear session">
+    </form>
+{% autoescape off %}
+    {% for x in request.session.list %}
+        {{x}}
+    
+    {% endfor %}
+{% endautoescape %}
+</div>

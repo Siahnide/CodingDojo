@@ -1,0 +1,70 @@
+*{
+ 
+    margin:0px;
+    padding:0px;
+    border:0px;
+}
+
+#world{
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+}
+.row{
+    /* line-height: 0; */
+    margin:-5px;
+    padding:0px;
+    line-height: 0px;
+    display:inline-block;
+}
+.wall{
+height:40px;
+width:40px;
+background:black;
+display:inline-block;
+
+
+
+
+}
+.blank{
+height:38px;
+width:38px;
+background:white;
+border:1px black solid;
+display:inline-block;
+
+}
+
+.player{
+    background:red;
+    height:40px;
+    width:40px;
+    display:inline-block;
+}
+
+.greenK{
+	background: url('Zelda.png') no-repeat -95px -44px ;
+    margin:6px 11px 6px 11px;
+    width: 18px;
+    height: 28px;
+    display:inline-block;
+
+}
+.redK{
+	background-image: url('../img/BlueK/stepdown2.png');
+	width: 31px;
+	height: 29px;
+    margin:5.5px 4.5px 5.5px 4.5px;
+    display:inline-block;
+
+}
+
+#alert{
+    display:inline-block;
+}
+#moves{
+    display:inline-block;
+    margin-left:40px;
+    font-size: 26px;
+}

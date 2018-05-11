@@ -1,0 +1,35 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'store/css/main.css' %}">
+</head>
+<div id="container">
+    <div id="items">
+        <div id="item">Items</div>
+            {% for x in request.session.items %}
+            <div id='item'>{{x}}</div>
+            {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Prices</div>
+            {% for x in request.session.prices %}
+            <div id='item'>{{x}}</div>
+            {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Quantity</div>
+        
+            {% for x in request.session.items %}
+                <div id='item'> 
+                        <form action='/process' method='POST'>
+                            {% csrf_token %} 
+                            <input type="hidden" value="{{x}}" name="hidden">
+                            <input type='number' name="quantity">
+                            <input type='submit' value='Buy'>
+                        </form> 
+                </div>
+            {% endfor %}
+        
+    </div>
+
+</div>
+<p id="red">{{phrase}}</p>

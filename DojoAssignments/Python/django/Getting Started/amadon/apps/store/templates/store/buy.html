@@ -1,0 +1,6 @@
+<p>Thankyou for purchasing {{request.session.activequantity}} of your very own {{request.session.activeitem}}! We charged your card {{request.session.activeprice}}</p>
+
+<form action="/" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Continue Shopping!"> 
+</form>

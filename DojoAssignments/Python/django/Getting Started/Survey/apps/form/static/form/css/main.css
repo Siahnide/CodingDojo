@@ -1,0 +1,21 @@
+*{
+    text-align: center;
+}
+
+h1{
+    color:blue;
+}
+
+#input{
+    display: block;
+    margin-bottom:10px;
+}
+#submit{
+    overflow: hidden;
+    width: 120px;
+    height: unset;
+    color:white;
+    background: royalblue;
+    box-shadow: 3px 5px black;
+    border: 3px black solid;
+}

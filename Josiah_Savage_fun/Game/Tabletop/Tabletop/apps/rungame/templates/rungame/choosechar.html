@@ -1,0 +1,32 @@
+<head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'rungame/css/index.css' %}" media="screen" title="no title"  charset="utf-8">
+    
+    </head>
+<div id="choice">
+        <p>Choose your character </p>
+        
+            <form action="/choose/char" method="post">
+                {% csrf_token %}
+                <input type="submit" id="Fighter" value="Fighter" name="char">
+                {{fighters}}
+            </form>
+            <form action="/choose/char" method="post">
+                {% csrf_token %}
+                <input type="submit" id="Rogue" value="Rogue" name="char">
+            </form>
+            <form action="/choose/char" method="post">
+                {% csrf_token %}
+                <input type="submit" id="Fighter" value="Wizard" name="char">
+            </form>
+            <form action="/choose/char" method="post">
+                {% csrf_token %}
+                <input type="submit" id="Fighter" value="Warlock" name="char">
+            </form>
+                
+            
+            
+            
+    
+        
+    </div>

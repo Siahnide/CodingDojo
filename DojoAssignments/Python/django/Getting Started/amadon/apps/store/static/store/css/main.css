@@ -1,0 +1,24 @@
+#items{
+    display:inline-block;
+    width:100px;
+    text-align: center;
+    margin-right:-3px;
+    vertical-align: bottom;
+
+}
+#items #item{
+    height:40px;
+    width:100%;
+    text-align: center;
+    border:.25px black solid;
+    vertical-align: bottom;
+}
+
+#items #item form input{
+    width: 40%;
+    text-align: center;
+    margin-top:10px;
+}
+#red{
+    color:red
+}

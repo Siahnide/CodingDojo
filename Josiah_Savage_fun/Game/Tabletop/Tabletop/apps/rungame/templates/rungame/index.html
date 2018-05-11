@@ -1,0 +1,16 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'rungame/css/index.css' %}" media="screen" title="no title"  charset="utf-8">
+
+</head>
+
+
+<h1> Welcome!</h1>
+<p>How many Players?</p>
+
+<form action="/choose" method="post">
+    {% csrf_token %}
+    <input type="number" name="players">
+    <input type="submit">
+</form>
+
