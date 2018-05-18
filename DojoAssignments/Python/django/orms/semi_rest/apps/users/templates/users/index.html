@@ -1,0 +1,13 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'users/css/main.css' %}">
+</head>
+
+
+<form action="/process" method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="Full Name" name="name">
+    <input type="text" placeholder="email" name="email">
+    <input type="submit" id="submit">
+</form>
+{{request.session.err}}

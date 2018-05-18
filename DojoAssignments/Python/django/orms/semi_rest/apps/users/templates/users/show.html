@@ -1,0 +1,62 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/css/main.css' %}">
+</head>
+
+
+
+<div id="container">
+    <div id="items">
+        <div id="item">Id</div>
+        {% for user in User %}
+        <div id='item'>{{user.id}}</div>
+        {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Name</div>
+        {% for user in User %}
+        <div id='item'>{{user.name}}</div>
+        {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Email</div>
+        {% for user in User %}
+        <div id='item'>{{user.email}}</div>
+        {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Date Created</div>
+        {% for user in User %}
+        <div id='item'>{{user.created_at}}</div>
+        {% endfor %}
+    </div>
+
+    <div id="items">
+        {% for user in User %}
+            <div id="item">
+        <form action="/show/{{user.id}}" method="GET">
+            {% csrf_token %}
+            <input type="submit" value="Show">
+        </form>
+        <form action="/delete/{{user.id}}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Delete">
+        </form>
+        <form action="/edit/{{user.id}}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Edit">
+        </form>
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+<form action="/" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Create User">
+</form>

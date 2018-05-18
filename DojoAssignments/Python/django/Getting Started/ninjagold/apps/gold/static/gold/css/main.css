@@ -1,0 +1,59 @@
+#yourgold{
+    display:inline-block;
+    width:100%;
+    vertical-align: top;
+}
+#yourgold p{
+    display:inline-block;
+    width:100px;
+    
+}
+
+#yourgold .gold{
+    display:inline-block;
+    border:2px black solid;
+    width:100px;
+    text-align: center
+    
+}
+
+#empty{
+    display:inline-block;
+    margin-left:10px;
+}
+#goldbox{
+    vertical-align: top;
+    width:130px;
+    height:130px;
+    padding:20px;
+    padding-top:10px;
+    margin:10px;
+    border: solid 3px black;
+    display:inline-block;
+
+}
+#activities{
+    width:770px;
+    height:130px;
+    margin-left:10px;
+}
+    #activities p{
+        margin-bottom:2px;
+    }
+    #activities #activitiesbox{
+        height:200px;
+        width:100%;
+        border:3px black solid;      
+        overflow: scroll 
+    }
+    
+    #activities #activitiesbox p{
+        margin-top:2px;
+        margin-bottom:2px;
+    }
+#red{
+    color:red
+}
+#green{
+    color:green
+}

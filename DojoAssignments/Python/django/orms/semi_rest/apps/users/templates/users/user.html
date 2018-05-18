@@ -1,0 +1,22 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'users/css/main.css' %}">
+</head>
+
+User {{User.id}}<br>
+<br>
+Full Name:{{User.name}}<br>
+<br>
+Email:{{User.email}}<br>
+<br>
+Created at:{{User.created_at}}<br>
+
+<form action="/edit/{{User.id}}" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Edit">
+</form>
+
+<form action="/delete/{{User.id}}" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Delete">
+</form>

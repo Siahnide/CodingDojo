@@ -1,0 +1,14 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'users/css/main.css' %}">
+</head>
+
+<h1>Welcome {{User.name}}!</h1>
+
+<form action="/process/{{User.id}}" method="POST">
+    {% csrf_token %}
+    
+    <input type="text" placeholder="Full Name" name="name" value="{{User.name}}">
+    <input type="text" placeholder="email" name="email" value="{{User.email}}">
+    <input type="submit" id="submit" value="Update">
+</form>

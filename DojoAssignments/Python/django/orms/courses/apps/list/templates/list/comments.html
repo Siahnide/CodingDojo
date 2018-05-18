@@ -1,0 +1,28 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'list/css/main.css' %}">
+</head>
+
+<p>Comments for the Course: {{ Course.name }}</p>
+<p></p>
+<hr>
+{% for comment in Comment %}
+    <p>{{comment.content}}</p>
+
+{% endfor %}
+<p></p>
+<p></p>
+<p></p>
+<hr>
+<p>Post A comment!</p>
+<form action="/comment/{{Course.id}}" method="POST">
+    {% csrf_token %}
+    <textarea name="content"></textarea>
+    <input type="submit" id="submit">
+</form>
+
+
+<form action="/" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Return">
+</form>

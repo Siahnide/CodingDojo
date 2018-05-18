@@ -1,0 +1,57 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'list/css/main.css' %}">
+</head>
+
+
+
+<div id="container">
+    <div id="items">
+        <div id="item">course Name</div>
+        {% for course in Course %}
+        <div id='item'>{{course.name}}</div>
+        {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Description</div>
+        {% for course in Course %}
+        <div id='item'>
+            <form action="/read/{{course.id}}" method="POST">
+            {% csrf_token %}
+            <input type="submit" id="submit" value="read">
+        </form></div>
+        {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Date Added</div>
+        {% for course in Course %}
+        <div id='item'>{{course.created_at}}</div>
+        {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Remove</div>
+        {% for course in Course %}
+        <div id='item'><form action="/really/{{course.id}}" method="POST">
+            {% csrf_token %}
+            <input type="submit" id="submit" value="remove">
+        </form></div>
+        {% endfor %}
+    </div>
+    <div id="items">
+        <div id="item">Comments</div>
+        {% for course in Course %}
+        <div id='item'><form action="/comment/{{course.id}}" method="POST">
+            {% csrf_token %}
+            <input type="submit" id="submit" value="Comment">
+        </form></div>
+        {% endfor %}
+    </div>
+</div>
+
+<form action="/process" method="POST">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="name">
+    <textarea name="description" placeholder="description"></textarea>
+    <input type="submit" id="submit">
+</form>
+    

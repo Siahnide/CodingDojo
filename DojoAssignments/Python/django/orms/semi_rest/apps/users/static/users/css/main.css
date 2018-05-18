@@ -1,0 +1,48 @@
+#items{
+    display:inline-block;
+    text-align: center;
+    margin-right:-1px;
+    vertical-align: bottom;
+
+}
+    #items #item{
+        padding:2px;
+        height:40px;
+        width:100%;
+        text-align: center;
+        border:.25px black solid;
+        vertical-align: bottom;
+    }
+
+#items #item form{
+    width:40%;
+    display:inline-block;
+    margin:0px;
+
+}
+#items #item form input{
+    width: 100%;
+    padding:0px;
+    text-align: center;
+    
+    display:inline-block;
+    border:0px;
+    color:blue;
+    background:transparent;
+}
+#red{
+    color:red
+}
+
+
+
+#submit{
+    overflow: hidden;
+    margin-top:5px;
+    width: 100px;
+    height: 25px;
+    color:white;
+    background: royalblue;
+    box-shadow: 3px 5px black;
+    border: 3px black solid;
+}

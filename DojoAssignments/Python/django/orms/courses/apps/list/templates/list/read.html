@@ -1,0 +1,12 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'list/css/main.css' %}">
+</head>
+
+
+{{Course.description}}
+
+<form action="/" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="return">
+</form>

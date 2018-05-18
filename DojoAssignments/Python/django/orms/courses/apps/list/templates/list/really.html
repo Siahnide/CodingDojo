@@ -1,0 +1,22 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'list/css/main.css' %}">
+</head>
+
+<h1>Are you Sure you want to delete the following course?</h1>
+Name:{{Course.name}}
+<hr>
+Description:{{Course.description}}
+
+
+<hr>
+<form action="/" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="No">
+</form>
+<hr>
+<form action="/remove/{{Course.id}}" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submitr" value="Yes! I want to delete this">
+</form>
+<hr>

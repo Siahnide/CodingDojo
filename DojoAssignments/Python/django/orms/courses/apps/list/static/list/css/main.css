@@ -1,0 +1,43 @@
+
+form input{
+    vertical-align: top;
+    display:inline-block;
+}
+
+
+#items{
+    display:inline-block;
+    width:100px;
+    text-align: center;
+    margin-right:-3px;
+    vertical-align: bottom;
+
+}
+    #items #item{
+        height:40px;
+        width:100%;
+        text-align: center;
+        border:.25px black solid;
+        vertical-align: bottom;
+    }
+
+#submit{
+    overflow: hidden;
+    margin-top:5px;
+    width: 80px;
+    height: 25px;
+    color:white;
+    background: royalblue;
+    box-shadow: 3px 5px black;
+    border: 3px black solid;
+}
+#submitr{
+    overflow: hidden;
+    margin-top:5px;
+    width:180px;
+    height: 25px;
+    color:white;
+    background: red;
+    box-shadow: 3px 5px black;
+    border: 3px black solid;
+}
