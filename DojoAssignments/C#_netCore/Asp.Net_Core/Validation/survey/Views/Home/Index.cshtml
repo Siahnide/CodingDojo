@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+@model User
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
+
+</head>
+<body>
+    <form asp-action="Create" asp-controller="Home" method="post">
+        <span asp-validation-for="FirstName"></span>
+        <label asp-for="FirstName">
+        First Name: <input asp-for="FirstName">
+        <span asp-validation-for="LastName"></span>
+        <label asp-for="LastName">
+        Last Name:<input asp-for="LastName">
+        
+        <span asp-validation-for="Age"></span>
+        <label asp-for="Age">
+        Age:<input asp-for="Age">
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email">
+        Email:<input asp-for="Email">
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password">
+        Password:<input asp-for="Password">
+        <input value="Add User" type="submit">
+    
+</label></label></label></label></label></form>
+</body>
+</html>

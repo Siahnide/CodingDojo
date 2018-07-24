@@ -1,0 +1,32 @@
+@model User
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='styles.css'>
+</head>
+
+<body>
+
+
+<div id="card">
+<h1>Submitted Info</h1>
+<div class="info">
+    Name:
+    @Model.Name <hr>
+</div>
+<div class="info">
+    Dojo Location:
+    @Model.Location <hr>
+</div>
+<div class="info">
+    Favorite Language:
+    @Model.Language <hr>
+</div>
+<div class="info">
+    Comment:
+    @Model.Comment <hr>
+</div>        
+
+
+</body>
+</html>

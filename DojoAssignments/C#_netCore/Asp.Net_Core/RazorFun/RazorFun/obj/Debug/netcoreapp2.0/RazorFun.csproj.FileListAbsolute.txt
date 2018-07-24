@@ -1,0 +1,10 @@
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\bin\Debug\netcoreapp2.0\RazorFun.deps.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\bin\Debug\netcoreapp2.0\RazorFun.runtimeconfig.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\bin\Debug\netcoreapp2.0\RazorFun.runtimeconfig.dev.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\bin\Debug\netcoreapp2.0\RazorFun.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\bin\Debug\netcoreapp2.0\RazorFun.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\obj\Debug\netcoreapp2.0\RazorFun.csproj.CoreCompileInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\obj\Debug\netcoreapp2.0\RazorFun.AssemblyInfoInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\obj\Debug\netcoreapp2.0\RazorFun.AssemblyInfo.cs
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\obj\Debug\netcoreapp2.0\RazorFun.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\RazorFun\RazorFun\obj\Debug\netcoreapp2.0\RazorFun.pdb

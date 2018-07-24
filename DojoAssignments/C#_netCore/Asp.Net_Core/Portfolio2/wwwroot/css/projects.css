@@ -1,0 +1,109 @@
+
+body{
+    margin:0px;
+}
+p{
+    vertical-align: top;
+}
+#header{
+    width:100%;
+    height:80px;
+    text-align: center;
+}
+    spick{
+        color:blue;
+        font-size: 20px;
+        text-decoration-line: underline;
+    }
+    span{
+        color:black;
+        font-size: 20px;
+        text-decoration-line: none;
+    }
+
+#leftright{
+    margin:0px;
+    padding:0px;
+    width:49%;
+    text-align: center;
+    display:inline-block;
+}
+#me{
+    position: relative;
+    margin-left:30%;
+    background-image: url("../img/me.jpg");
+    background-size: 200px 150px;
+    height:150px;
+    width:200px;
+    
+}
+#projectcontainer{
+    height:400px;
+    width:700px;
+    outline: 1px black solid;
+    margin-left:16%;
+    overflow: scroll;
+}
+
+#projone{
+    background-image: url("../img/projone.jpg");
+    display:inline-block;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    background-size: 200px 150px;
+    height:150px;
+    width:200px;
+}
+#projtwo{
+    background-image: url("../img/projtwo.jpg");
+    display:inline-block;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    background-size: 200px 150px;
+    height:150px;
+    width:200px;
+}
+#projthree{
+    background-image: url("../img/projthree.jpg");
+    display:inline-block;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    background-size: 200px 150px;
+    height:150px;
+    width:200px;
+}
+#projfour{
+    background-image: url("../img/projfour.jpg");
+    display:inline-block;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    background-size: 200px 150px;
+    height:150px;
+    width:200px;
+}
+#projfive{
+    background-image: url("../img/projfive.jpg");
+    display:inline-block;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    
+    background-size: 200px 150px;
+    height:150px;
+    width:200px;
+}
+#projsix{
+    background-image: url("../img/projsix.jpg");
+    display:inline-block;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    background-size: 200px 150px;
+    height:150px;
+    width:200px;
+}
+#textbox{
+    width:400px;
+    height:140px;
+    display:inline-block;
+    vertical-align: top;
+    
+}

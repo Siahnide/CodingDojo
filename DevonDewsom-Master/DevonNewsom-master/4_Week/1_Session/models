@@ -1,0 +1,15 @@
+	
+	
+	What ARE Models?
+
+
+	public class User
+	{
+		string FirstName {get;set;}
+	}
+
+	
+	Use Models to:
+
+	* Submit forms
+	* Pass data to our view (like ViewBag, just better...)

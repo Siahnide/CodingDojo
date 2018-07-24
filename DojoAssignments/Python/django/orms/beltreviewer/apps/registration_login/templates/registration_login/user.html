@@ -1,0 +1,12 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'registration_login/css/main.css' %}">
+</head>
+
+<h1>Success! Welcome, {{user.first_name}}!</h1>
+<p id="green">Successfully registered (or logged in)!</p>
+
+<form action="/books" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit">
+</form>

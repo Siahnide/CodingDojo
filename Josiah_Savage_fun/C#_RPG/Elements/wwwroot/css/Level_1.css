@@ -1,0 +1,19 @@
+body{
+    margin:0px;
+}
+
+
+#wall{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    margin:0px;
+    background:black;
+}
+#blank{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    margin:0px;
+    background:white;
+}

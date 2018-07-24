@@ -1,0 +1,40 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'books/css/main.css' %}">
+</head>
+
+<h2>Welcome, {{request.session.active_name}}!</h2>
+
+<h3 id="inline-block">Recent Book Reviews</h3> <a id="link" href="/books/add">Add Book and Review</a><a id="link" href="/">Logout</a> <br>
+
+
+
+{% for x in Review %}
+<hr>
+<a href="/books/{{x.book.id}}">{{x.book.title}}</a>
+
+<p><a href="/books/user/{{x.creator}}">{{x.creator}}</a>says:   {{x.content}}  {{x.rating}}/5</p>
+<br>
+Posted On {{x.created_at}}
+{% if request.session.active_name == x.creator %}
+<form action="/books/delete/{{x.id}}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="delete this review">
+</form>
+{% endif %}
+
+{% endfor %}
+<hr>
+
+
+
+
+
+
+<h3>Other Books with Reviews:</h3>
+{% for book in Books %}
+<legend>
+<p><a href="/books/{{book.id}}">{{book.title}}</a></p>
+</legend>
+
+{% endfor %}

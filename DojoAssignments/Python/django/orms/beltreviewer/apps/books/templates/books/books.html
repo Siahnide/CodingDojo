@@ -1,0 +1,22 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'books/css/main.css' %}">
+</head>
+
+
+
+{% for book in Book %}
+{{book.title}} {{book.author.name}}{{book.review.content}}{{book.review.rating}}
+
+<form action="/books/delete/{{book.id}}" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="remove" value="Remove">
+</form>
+<br>
+
+{% endfor %}
+
+<form action="/books/add" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Add a book">
+</form>

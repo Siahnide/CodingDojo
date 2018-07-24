@@ -1,0 +1,11 @@
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\bin\Debug\netcoreapp2.0\Portfolio1.deps.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\bin\Debug\netcoreapp2.0\Portfolio1.runtimeconfig.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\bin\Debug\netcoreapp2.0\Portfolio1.runtimeconfig.dev.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\bin\Debug\netcoreapp2.0\Portfolio1.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\bin\Debug\netcoreapp2.0\Portfolio1.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\obj\Debug\netcoreapp2.0\Portfolio1.csproj.CoreCompileInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\obj\Debug\netcoreapp2.0\Portfolio1.AssemblyInfoInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\obj\Debug\netcoreapp2.0\Portfolio1.AssemblyInfo.cs
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\obj\Debug\netcoreapp2.0\Portfolio1.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\obj\Debug\netcoreapp2.0\Portfolio1.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Portfolio1\obj\Debug\netcoreapp2.0\Portfolio1.csprojResolveAssemblyReference.cache

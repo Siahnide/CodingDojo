@@ -1,0 +1,45 @@
+#items{
+    display:inline-block;
+    width:200px;
+    text-align: center;
+    margin-right:-3px;
+    vertical-align: bottom;
+
+}
+#itemz{
+    display:inline-block;
+    width:500px;
+    text-align: center;
+    margin-right:-3px;
+    vertical-align: bottom;
+
+}
+    #items #item{
+        height:40px;
+        width:100%;
+        text-align: center;
+        border:.25px black solid;
+        vertical-align: bottom;
+    }
+    #itemz #item{
+        height:40px;
+        width:100%;
+        text-align: center;
+        border:.25px black solid;
+        vertical-align: bottom;
+    }
+form{
+    display:inline-block;
+}
+#form_group{
+    display:block;
+}
+
+#floater{
+    position: absolute;
+    right:50px;
+    top:30px;
+}
+span{
+    color:red;
+}

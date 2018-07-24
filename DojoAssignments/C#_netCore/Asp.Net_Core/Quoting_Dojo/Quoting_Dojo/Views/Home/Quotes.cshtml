@@ -1,0 +1,13 @@
+<h1>Here are the awesome quotes!</h1>
+
+<form action="/" method="GET">
+    <input type="submit" value="Back">
+</form>
+@{
+    foreach(var x in ViewBag.list)
+    {
+        <p>@x["name"]</p>
+        <p>-@x["quote"]  @x["created_at"]</p>
+        <hr>
+    }
+}

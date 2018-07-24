@@ -1,0 +1,13 @@
+.info{
+    display:block;
+}
+.info p1{
+    width:130px;
+}
+.info p{
+    display:inline;
+    
+}
+input{
+    display:block;
+}

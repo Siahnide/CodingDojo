@@ -1,0 +1,19 @@
+*.pyc
+venv/
+
+
+
+server {
+  listen 80;
+  server_name 52.15.101.77;
+  location = /favicon.ico { access_log off; log_not_found off; }
+  location /static/ {
+      root /home/ubuntu/deployment2;
+  }
+  location / {
+      include proxy_params;
+      proxy_pass http://unix:/home/ubuntu/deployment2/ninjagold.sock;
+  }
+}
+
+sudo ln -s /etc/nginx/sites-available/ninjagold /etc/nginx/sites-enabled

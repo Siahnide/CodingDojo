@@ -1,0 +1,27 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'registration_login/css/main.css' %}">
+</head>
+<h3>Registration</h3>
+<form action="/register" method="POST">
+    {% csrf_token %}
+    <div id="block">First Name:</div><input type="text" id="input" name="first_name"><br>
+    <div id="block">Last Name:</div><input type="text" id="input" name="last_name"><br>
+    <div id="block">Email:</div><input type="text" id="input" name="email"><br>
+    <div id="block">Password:</div><input type="text" id="input" name="password"><br>
+    <div id="block">Confirm Password:</div><input type="text" id="input" name="confirm"><br>
+    <input type="submit" id="submit">
+</form>
+
+<h3>Login</h3>
+<form action="/login" method="POST">
+    {% csrf_token %}
+    <div id="block">Email:</div><input type="text" id="input" name="email"><br>
+    <div id="block">Password:</div><input type="text" id="input" name="password"><br>
+    <input type="submit" id="submit">
+</form>
+
+
+{% for x in request.session.error %}
+<p id=red>{{x}}</p>
+{% endfor %}

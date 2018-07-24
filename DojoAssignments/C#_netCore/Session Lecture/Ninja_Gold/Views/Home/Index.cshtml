@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/Index.css">
+</head>
+
+
+
+
+<h2>Ninja Gold</h2>
+<p>Gold: @ViewBag.Gold</p>
+<hr>
+<form action="gold" method="post">
+    <h3>Underground Cavern</h3>
+    <h4>(5-10 Gold)</h4>
+    <input type="hidden" name="building" value="cavern">
+    <button>Get Gold</button> 
+</form>
+<form action="gold" method="post">
+    <h3>Dragon's Lair</h3>
+    <h4>(100-200 Gold OR You Die)</h4>
+    <input type="hidden" name="building" value="lair">
+    <button>Get Gold</button> 
+</form>
+<form action="gold" method="post">
+    <h3>Nana's House</h3>
+    <h4>(1-3 Gold)</h4>
+    <input type="hidden" name="building" value="nana">
+    <button>Get Gold</button> 
+</form>
+<form action="gold" method="post">
+    <h3>Castle</h3>
+    <h4>(10-25 Gold Or Get Robbed)</h4>
+    <input type="hidden" name="building" value="castle">
+    <button>Get Gold</button> 
+</form>

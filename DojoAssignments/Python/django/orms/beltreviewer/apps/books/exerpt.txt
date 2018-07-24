@@ -1,0 +1,20 @@
+        if self.status == True:
+            if request.POST["new_author"] != "":
+                Author.objects.create(name=request.POST["new_author"])
+                Review.objects.create(content=request.POST["content"],rating=request.POST["rating"])
+                Book.objects.create(title = request.POST["title"],author = Author.objects.filter(name= request.POST["new_author"])[0] , review = Review.objects.filter(content=request.POST["content"])[0])
+            if request.POST["title"] == "":
+                self.status = False
+                request.session["error"] = "<div id='red'>Blank Field</div>"
+                return self
+            if request.POST["new_author"] == "":
+                Book.objects.create(title = request.POST["title"],author = Author.objects.filter(name= request.POST["author"])[0] , review = Review.objects.filter(content=request.POST["content"])[0])
+            
+                    
+        elif self.status == False:
+            return HttpResponse('Incorrect')
+
+
+        request.session["error"] = "<div id='red'>Blank Field</div>"
+        self.status = False
+        return self

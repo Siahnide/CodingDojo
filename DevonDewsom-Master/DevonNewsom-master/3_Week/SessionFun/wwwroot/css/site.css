@@ -1,0 +1,12 @@
+﻿form {
+    display: inline-block;
+    border: solid 2px black;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+}
+#goldHeader {
+    font-family: monospace;
+    font-weight: bold;
+    color: green;
+}

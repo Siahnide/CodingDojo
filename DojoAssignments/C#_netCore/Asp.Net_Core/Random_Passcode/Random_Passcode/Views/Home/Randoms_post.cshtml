@@ -1,0 +1,22 @@
+@{
+    @using System;
+    @using System.Collections.Generic;
+    @using Microsoft.AspNetCore.Http;
+    Random rand = new Random();
+    string[] alph = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+    string msg = "";
+    for (int i = 0; i < 14; i++)
+    {
+        int num = rand.Next(0,25);
+        msg += alph[num];
+        
+    }
+
+}
+
+
+    <p>Random passcode (passcode #@ViewBag.Num)</p>
+    <form action="Randoms_post" method="POST">
+        <input type=submit>
+    </form>
+    <h4>@msg</h4>

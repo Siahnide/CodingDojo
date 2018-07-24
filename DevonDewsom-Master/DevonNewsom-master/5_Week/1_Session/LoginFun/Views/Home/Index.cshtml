@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+@model RegistrationUser
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="~/css/main.css">
+</head>
+
+<body>
+
+<div id="footer">
+    <p>Create A user!</p>
+    <form asp-action="Registration" asp-controller="Home" method="POST">
+        <div id="form-group">
+        <span asp-validation-for="first_name"></span>
+        <label asp-for="first_name">first_name:</label>
+        <input asp-for="first_name" ><br>
+        </div>
+        <div id="form-group">
+        <span asp-validation-for="last_name"></span>
+        <label asp-for="last_name">last_name:</label>
+        <input asp-for="last_name" ><br>
+        </div>
+        <div id="form-group">
+        <span asp-validation-for="email"></span>
+        <label asp-for="email">email:</label>
+        <input asp-for="email" ><br>
+        </div>
+        <div id="form-group">
+        <span asp-validation-for="password"></span>
+        <label asp-for="password">password:</label>
+        <input asp-for="password" ><br>
+        </div>
+        <div id="form-group">
+        <span asp-validation-for="confirm"></span>
+        <label asp-for="confirm">confirm:</label>
+        <input asp-for="confirm" ><br>
+        </div>
+        <div id="form-group">
+        
+        <input type="submit" value="Create Account!">
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+

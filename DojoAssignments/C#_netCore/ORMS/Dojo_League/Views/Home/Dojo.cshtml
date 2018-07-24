@@ -1,0 +1,83 @@
+@model ViewModel
+<link rel="stylesheet"  type="text/css" href= "~/css/main.css">
+<h2>@Model.newdojo.name</h2>
+<p>Dojo Location - @Model.newdojo.location</p>
+<p>Information - @Model.newdojo.info</p>
+<div id="left">
+    @{
+        if(Model.newdojo.id !=0)
+        {
+            <h2>Current Members</h2>
+        }
+        else
+        {
+            <h2>Current Rogues</h2>
+        }
+    }
+    <div id="items">
+        <div id="item">Ninja</div>
+        @{
+            foreach(Ninja x in Model.Ninjas)
+            {
+                <div id='item'>@x.name</div>
+                
+            }
+        }
+        
+    </div>
+    <div id="items">
+        @{
+            if(Model.newdojo.id !=0){
+            <div id="item">Action</div>
+            
+                @foreach(Ninja x in Model.Ninjas)
+                {
+                    <div id="item">
+                    <form action="/Banish" method="post">
+                            <input type="hidden" value="@Model.newdojo.id" name="dojo_id">
+                            <input type="hidden" value="@x.id" name="ninja_id">
+                            <input id="link" type="submit" value="@x.name">
+                        </form>
+                    </div>
+                }
+            }
+
+        }
+        
+    </div>
+</div>
+<div id="right">
+    @{
+        if(Model.newdojo.id !=0)
+        {
+            <h2>Rogue Ninjas</h2>
+            <div id="items">
+            <div id="item">Ninja</div>
+            @foreach(Ninja x in Model.RogueNinjas)
+            {
+                <div id='item'>@x.name</div>
+
+            }
+            </div>
+            <div id="items">
+                <div id="item">Action</div>
+                @foreach(Ninja x in Model.RogueNinjas)
+                {
+                    <div id='item'>
+                        <form action="/add" method="post">
+                            <input type="hidden" value="@Model.newdojo.id" name="dojo_id">
+                            <input type="hidden" value="@x.id" name="ninja_id">
+                            <input id="link" type="submit" value="@x.name">
+                        </form>
+                    </div>
+                }
+            </div>
+
+        }
+    }
+</div>
+
+<a id="floater" href="/ninjas">Ninjas</a>
+<a id="floater2" href="/ninjas">Dojos</a>
+
+

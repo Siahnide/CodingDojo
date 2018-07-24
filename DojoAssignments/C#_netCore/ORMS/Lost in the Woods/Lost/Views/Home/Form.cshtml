@@ -1,0 +1,50 @@
+@model Trail
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='~/css/main.css'>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.10.2.js'></script> 
+</head>
+<script>
+(document).ready(function(){
+
+});
+</script>
+<body>
+
+</body>
+</html>
+<h1>Add a New Trail</h1>
+<a id="floater" href="/">Go Home</a>
+<form asp-action='Process' asp-controller='Home' method='post'>
+    <div id='form_group'>
+        <span asp-validation-for='name'></span>
+        <label asp-for='name'></label>
+        <input asp-for='name'>
+    </div>
+    <div id='form_group'>
+        <span asp-validation-for='desc'></span>
+        <label asp-for='desc'></label>
+        <input asp-for='desc'>
+    </div>
+    <div id='form_group'>
+        <span asp-validation-for='length'></span>
+        <label asp-for='length'></label>
+        <input asp-for='length'>
+    </div>
+    <div id='form_group'>
+        <span asp-validation-for='elevation'></span>
+        <label asp-for='elevation'></label>
+        <input asp-for='elevation'>
+    </div>
+    <div id='form_group'>
+        <span asp-validation-for='longtitude'></span>
+        <label asp-for='longtitude'></label>
+        <input asp-for='longtitude'>
+        <span asp-validation-for='latitude'></span>
+        <label asp-for='latitude'></label>
+        <input asp-for='latitude'>
+    </div>
+    <input type='submit' value='Create Record!'>
+</form>

@@ -1,0 +1,17 @@
+﻿@{
+    string[] Toppings = new string[]
+    {
+        "Zezty Pep", "Mushroom", "Veggies", "Green Peps", "Sausege"
+    };
+}
+<h1>Submit a Pizza</h1>
+<form action="/create" method="post">
+    <input type="text" name="Name">
+    <select name="Topping" id="">
+        @foreach(string topping in Toppings)
+        {
+            <option value="@topping">@topping</option>
+        }
+    </select>
+    <button>Add Pizze</button>
+</form>

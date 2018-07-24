@@ -1,0 +1,8 @@
+﻿@model Pizza[]
+<h3>@TempData["Success"]</h3>
+<h1>All of our pizzas (@Model.Length)</h1>
+@foreach(Pizza za in Model)
+{
+    <p><strong>Name</strong>: @za.Name</p>
+    <p><strong>Topping</strong>: @za.Topping</p>
+}

@@ -1,0 +1,41 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'rpg/css/singleplayer_menu.css' %}">
+</head>
+
+<body>
+
+{% for x in char %}
+<hr>
+    <div id="current">{{x.name}}</div>
+<br>
+    <div id="current">
+        Hp:{{x.hp}} &nbsp;&nbsp;
+        Ac:{{x.ac}} &nbsp;&nbsp;
+        Atk:{{x.atk}} &nbsp;&nbsp;
+        Dmg:{{x.dmg}} &nbsp;&nbsp;
+        Speed:{{x.sp}} &nbsp;&nbsp;
+    </div>
+    <form action="/load_char" method="POST" id="submit_three">
+        {% csrf_token %}
+
+        <input type="hidden" value="{{x.name}}" name="name">
+        <input type="submit" id="submit_three" value="Load Character">
+    </form>
+    <form action="/del_char" method="POST" id="submit_three">
+        {% csrf_token %}
+
+        <input type="hidden" value="{{x.name}}" name="name">
+        <input type="submit" id="submit_three" value="Delete Character">
+    </form>
+<br>
+<br>
+{% endfor %}
+
+<form action="/single" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="back">
+</form>
+
+
+</body>

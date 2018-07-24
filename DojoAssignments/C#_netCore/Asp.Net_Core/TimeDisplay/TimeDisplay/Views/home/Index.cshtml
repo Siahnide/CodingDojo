@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='~/css/main.css'>
+
+</head>
+
+<body>
+<h3>The Current Time and date:</h3>
+<div id="box">
+@{
+    DateTime CurrentTime = DateTime.Now;
+    string stuff = CurrentTime.ToString("MMMM dd, yyyy") + ".";
+    string stuffs = CurrentTime.ToString("hh") + ":" + CurrentTime.ToString("mm") + " " + CurrentTime.ToString("tt");
+}
+
+<p>@stuff</p><br>
+<p>@stuffs</p>
+</div>
+
+</body>
+</html>
+
+
+
+
+

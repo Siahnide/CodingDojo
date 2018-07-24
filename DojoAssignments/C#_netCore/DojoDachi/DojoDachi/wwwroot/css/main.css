@@ -1,0 +1,32 @@
+*{
+    text-align: center;
+}
+span{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+
+#header{
+    margin:20px;
+}
+    #header div{
+        display:inline-block;
+    }
+#box{
+    border: black 1px solid;
+    display:inline-block;
+    height:300px;
+    width:500px;
+}
+    #box img{
+        height:140px;
+        width:140px;
+        margin:40px;
+        background:url("../images/normal.png")
+    }
+button{
+    margin:10px;
+    width:70px;
+    height:30px;
+}

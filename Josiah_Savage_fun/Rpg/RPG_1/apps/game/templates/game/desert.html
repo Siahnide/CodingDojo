@@ -1,0 +1,58 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'game/css/desert.css' %}">
+    
+    
+</head>
+<body>
+    
+    <div id="map">
+    <div id="char"></div>
+    
+
+
+
+
+    </div>
+    <div id="horizontal">
+        <div id="block">{{active.name}}</div>
+        <div id="block">
+            {{active.hp}}HP:<hr>
+            Ac: {{active.ac}} Speed: {{active.sp}}<hr>
+            Atk: {{active.atk}}  Dmg: {{active.dmg}}
+        </div>
+        <div id="block">
+            Head: {{active.head_item.name}}<br>
+            Chest: {{active.chest_item.name}}<br>
+            Arms: {{active.arms_item.name}}<br>
+            Feet: {{active.feet_item.name}}
+            
+            
+        </div>
+        <div id="block">
+            <hr>
+            RH: {{active.right_hand_item.name}}<hr>
+            LH: {{active.left_hand_item.name}}<hr>
+            
+            
+        </div>
+        
+        
+        
+        
+    </div>
+    <form action="/single" method="POST">
+        {% csrf_token %}
+        <input type="submit" id="submit" value="Abandon Level">
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+<script src="{% static 'game/javascript/desert.js' %}"></script>
+<script src="{% static 'game/javascript/controls.js' %}"></script>

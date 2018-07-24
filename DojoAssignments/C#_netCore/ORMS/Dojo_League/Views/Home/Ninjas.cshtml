@@ -1,0 +1,73 @@
+@model ViewModel
+
+<!DOCTYPE html>
+<html>
+
+<link rel='stylesheet' type='text/css' href='~/css/main.css'>
+<body>
+
+<div id="left">
+    <h1>Registered Ninjas</h1>
+    <div id="items">
+        <div id="item">Ninja Name</div>
+        @{
+            foreach(var ninja in Model.Ninjas)
+            {
+            
+                <div id='item'>    
+              
+                <a href="ninja/@ninja.id">@ninja.name</a>
+                </div>
+            }
+        }
+
+    </div>
+    <div id="items">
+        <div id="item">Home Dojo</div>
+        @{
+            foreach(var ninja in Model.Ninjas)
+            {
+                <div id='item'><a href="dojo/@ninja._dojo().id">@ninja._dojo().name</a></div>
+            }
+        }
+    </div>
+</div>
+<div id="right">
+    <h1>Register A Ninja</h1>
+    <form asp-action='CreateNinja' asp-controller='Home' method='post'>
+    <div id='form_group'>
+        <span asp-validation-for='newninja.name'></span>
+        <label asp-for='newninja.name'></label>
+        <input asp-for='newninja.name'>
+    </div>
+    <div id='form_group'>
+        <span asp-validation-for='newninja.level'></span>
+        <label asp-for='newninja.level'></label>
+        <input asp-for='newninja.level'>
+    </div>
+    <div id='form_group'>
+        <span asp-validation-for='newninja.dojo'></span>
+        <label asp-for='newninja.dojo'></label>
+        <select name="newninja.dojo">
+            
+            @{
+                foreach(var dojo in Model.Dojos)
+                {
+                    <option value="@dojo.id">@dojo.name</option>
+                }
+            }
+        </select>
+    </div>
+    <div id='form_group'>
+        <span asp-validation-for='newninja.description'></span>
+        <label asp-for='newninja.description'></label>
+        <input asp-for='newninja.description'>
+    </div>
+    <input type='submit' value='submit'>
+</form>
+</div>
+
+</body>
+</html>
+
+<a id="floater" href="/dojos">Add a Dojo!</a>

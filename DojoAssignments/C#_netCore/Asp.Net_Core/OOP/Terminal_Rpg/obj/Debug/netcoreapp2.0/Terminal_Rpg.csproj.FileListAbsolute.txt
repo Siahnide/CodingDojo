@@ -1,0 +1,11 @@
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\bin\Debug\netcoreapp2.0\Terminal_Rpg.deps.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\bin\Debug\netcoreapp2.0\Terminal_Rpg.runtimeconfig.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\bin\Debug\netcoreapp2.0\Terminal_Rpg.runtimeconfig.dev.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\bin\Debug\netcoreapp2.0\Terminal_Rpg.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\bin\Debug\netcoreapp2.0\Terminal_Rpg.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\obj\Debug\netcoreapp2.0\Terminal_Rpg.csprojResolveAssemblyReference.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\obj\Debug\netcoreapp2.0\Terminal_Rpg.csproj.CoreCompileInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\obj\Debug\netcoreapp2.0\Terminal_Rpg.AssemblyInfoInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\obj\Debug\netcoreapp2.0\Terminal_Rpg.AssemblyInfo.cs
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\obj\Debug\netcoreapp2.0\Terminal_Rpg.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\OOP\Terminal_Rpg\obj\Debug\netcoreapp2.0\Terminal_Rpg.pdb

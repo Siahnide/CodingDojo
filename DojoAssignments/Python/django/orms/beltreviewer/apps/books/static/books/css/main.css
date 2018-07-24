@@ -1,0 +1,46 @@
+*{
+    vertical-align: top;
+    margin:10px;
+}
+
+#link{
+    margin:10px;
+}
+
+#block{
+    display:inline-block;
+}
+#inline-block{
+    display:inline-block;
+}
+#submit{
+    display:block;
+    overflow: hidden;
+    margin-top:5px;
+    width: 160px;
+    height: 25px;
+    color:white;
+    background: blue;
+    box-shadow: 3px 5px black;
+    border: 3px black solid;
+}
+form{
+    display:inline-block;
+    margin:0px;
+}
+#remove{
+    vertical-align: top;
+    display:inline-block;
+    overflow: hidden;
+    margin-top:5px;
+    width: 130px;
+    height: 25px;
+    color:red;
+    background: transparent;
+    border: 0px;
+    
+}
+
+#red{
+    color:red
+}

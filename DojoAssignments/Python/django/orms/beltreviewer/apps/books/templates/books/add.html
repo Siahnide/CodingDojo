@@ -1,0 +1,37 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'books/css/main.css' %}">
+</head>
+
+
+<h3>Add a New Book Title and a Review</h3>
+
+<form action="/books/process" method="POST">
+    {% csrf_token %}
+    <h4 id="block">Book Title:</h4> <input type="text" name="title">
+    <h4>Author:</h4>
+    <div id="block">Choose from a list:</div>
+        <select name="author">
+            {% for x in Book %}
+            <option value="{{x.author.name}}">{{x.author.name}}</option>
+            {% endfor %}
+        </select><br>
+    <div id="block">Or add a new author</div> <input type="text" name="new_author"><br>
+    <h4 id="block">Review:</h4> <textarea name="content"></textarea>
+    <h4 id="block">Rating:</h4>
+    <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        
+    </select>
+    <input type="submit" id="submit" value="Add Book and Review">
+</form>
+<br>
+{% autoescape off %}
+{% for x in request.session.error %}
+{{x}}
+{% endfor %}
+{% endautoescape %}

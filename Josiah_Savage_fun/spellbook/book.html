@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.10.2.js'></script> 
+
+
+
+<style>
+    #create{
+        text-align: center;
+        background:grey;
+        vertical-align: middle;
+        border-radius: 15px;
+        padding:50px;
+        font-family: "Papyrus", 'Times New Roman', Times, serif
+
+
+    }
+
+
+
+
+</style>
+</head>
+<script>
+$(document).ready(function(){
+ 
+    
+    
+
+
+
+
+
+    $.get("http://www.dnd5eapi.co/api/spells/",function(res){
+        
+        count = res.count
+
+        arr =[]
+        spells = {
+            first:[],
+            second:[],
+            third:[],
+            fourth:[],
+            fifth:[],
+            sixth:[],
+            seventh:[],
+            eighth:[],
+            ninth:[],
+        }
+        for(var i = 1;i<res.count;i++){
+            $.get("http://www.dnd5eapi.co/api/spells/"+i+"",function(spell){
+                    
+                    for(var x = 0;x<spell.classes.length;x++){
+                        if (spell.classes[x].name == "Wizard"){
+                            if(spell.level == 1){
+                                spells.first[spells.first.length] = spell.name
+                            }
+                            if(spell.level == 2){
+                                spells.second[spells.second.length] = spell.name
+                            }
+                            if(spell.level == 3){
+                                spells.third[spells.third.length] = spell.name
+                            }
+                            if(spell.level == 4){
+                                spells.fourth[spells.fourth.length] = spell.name
+                            }
+                            if(spell.level == 5){
+                                spells.fifth[spells.fifth.length] = spell.name
+                            }
+                            if(spell.level == 6){
+                                spells.sixth[spells.sixth.length] = spell.name
+                            }
+                            if(spell.level == 7){
+                                spells.seventh[spells.seventh.length] = spell.name
+                            }
+                            if(spell.level == 8){
+                                spells.eighth[spells.eighth.length] = spell.name
+                            }
+                            if(spell.level == 9){
+                                spells.ninth[spells.ninth.length] = spell.name
+                            }
+                        }
+                    }
+                }) 
+        }
+        
+
+  
+
+
+        $('#create').on('click',function(){
+            var x = Math.floor((Math.random() * 101) + 1);
+            spells_list =[]
+            if(x < 25){ //1st
+                level = "first"
+                count1 =Math.floor((Math.random() * 6) + 1);
+                touch1()
+            }
+            if(x >25 && x< 45){//2nd
+                level = "second"
+                count1 =Math.floor((Math.random() * 2) + 1);
+                count2 =2
+                levels = "first"
+                touch2()
+            }
+            if(x >45 && x< 65){//3rd
+                level = "third"
+                count1 =Math.floor((Math.random() * 1) + 1)
+                count2 =Math.floor((Math.random() * 1) + 1)
+                count3 =2
+                levels = "first"
+                levelses = "second"
+                touch3()
+            }
+            if(x >65 && x< 80){//4th
+                level = "fourth"
+                count1 =Math.floor((Math.random() * 1) + 0)
+                count2 = Math.floor((Math.random() * 2) + 1)
+                rand = Math.floor((Math.random() * 2) + 1)
+                if(rand == 1){
+                    levels = "first"
+                }
+                if(rand == 2){
+                    levels = "second"
+                }
+                if(rand == 3){
+                    levels = "third"
+                }
+                touch2()
+            }
+            if(x >80 && x< 90){//5th
+                level = "fifth"
+                count1 =Math.floor((Math.random() * 1) + 1)
+                count2 = Math.floor((Math.random() * 2) + 1)
+                rand = Math.floor((Math.random() * 4) + 1)
+                if(rand == 1){
+                    levels = "first"
+                }
+                if(rand == 2){
+                    levels = "second"
+                }
+                if(rand == 3){
+                    levels = "third"
+                }
+                if(rand == 4){
+                    levels = "fourth"
+                }
+                touch2()
+            }
+            if(x >90 && x< 95){//6th
+                level = "sixth"
+                count1 =Math.floor((Math.random() * 2) + 1)
+                touch1()
+            }
+            if(x >95 && x< 98){//7th
+                level = "seventh"
+                count1 =1
+                touch1()
+            }
+            if(x >98 && x< 100){//8th
+                level = "eighth"
+                count1 = 1
+                touch1()
+            }
+            if(x == 101){//9th
+                level = "ninth"
+                count1 =1
+               touch1()
+            }
+            function touch1(){
+                html_str = ""
+                html_str +="<h1>" + level + " level spellbook</h1>"
+            for(var i = 0;i<count1;i++){
+                x = Math.floor((Math.random() * spells[level].length))
+                html_str += "<p>" +level+ " level " + spells[level][x] + "</p>"
+               }
+               document.getElementById("book").innerHTML = html_str
+            }
+            function touch2(){
+                html_str = ""
+                html_str +="<h1>Mutli-level spellbook ("+level+", "+levels+")</h1>"
+            for(var i = 0;i<count2;i++){
+                x = Math.floor((Math.random() * spells[level].length))
+                html_str += "<p>" +level+ " level " + spells[level][x] + "</p>"
+               }
+            for(var i = 0;i<count1;i++){
+                x = Math.floor((Math.random() * spells[levels].length))
+                html_str += "<p>" +levels+ " level " + spells[levels][x] + "</p>"
+               }
+            document.getElementById("book").innerHTML = html_str
+            }
+
+            function touch3(){
+                html_str = ""
+                html_str +="<h1>Mutli-level spellbook ("+level+", "+levels+", "+levelses+")</h1>"
+            for(var i = 0;i<count3;i++){
+                x = Math.floor((Math.random() * spells[level].length))
+                html_str += "<p>" +level+ " level " + spells[level][x] + "</p>"
+               }
+            for(var i = 0;i<count1;i++){
+                x = Math.floor((Math.random() * spells[levels].length))
+                html_str += "<p>" +levels+ " level " + spells[levels][x] + "</p>"
+               }
+            for(var i = 0;i<count2;i++){
+                x = Math.floor((Math.random() * spells[levelses].length))
+                html_str += "<p>" +levelses+ " level " + spells[levelses][x] + "</p>"
+               }
+            document.getElementById("book").innerHTML = html_str
+            }
+
+        });
+});
+
+
+
+
+});
+</script>
+<body>
+
+</body>
+
+<h1 id="create">Create A Spellbook</h1>
+
+<p id="book"></p>
+
+
+
+
+</html>

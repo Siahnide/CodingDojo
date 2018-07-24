@@ -1,0 +1,11 @@
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\bin\Debug\netcoreapp2.0\Quoting_Dojo.deps.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\bin\Debug\netcoreapp2.0\Quoting_Dojo.runtimeconfig.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\bin\Debug\netcoreapp2.0\Quoting_Dojo.runtimeconfig.dev.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\bin\Debug\netcoreapp2.0\Quoting_Dojo.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\bin\Debug\netcoreapp2.0\Quoting_Dojo.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\obj\Debug\netcoreapp2.0\Quoting_Dojo.csprojResolveAssemblyReference.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\obj\Debug\netcoreapp2.0\Quoting_Dojo.csproj.CoreCompileInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\obj\Debug\netcoreapp2.0\Quoting_Dojo.AssemblyInfoInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\obj\Debug\netcoreapp2.0\Quoting_Dojo.AssemblyInfo.cs
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\obj\Debug\netcoreapp2.0\Quoting_Dojo.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\netCore\Asp.Net_Core\Quoting_Dojo\Quoting_Dojo\obj\Debug\netcoreapp2.0\Quoting_Dojo.pdb

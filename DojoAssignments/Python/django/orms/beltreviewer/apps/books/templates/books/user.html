@@ -1,0 +1,21 @@
+<h3>User Alias: {{User.first_name}}</h3>
+<h3>Name: {{User.first_name}} {{User.last_name}}</h3>
+<h3>Email: {{User.email}}</h3>
+<br>
+<h3>Posted reviews on the following books:</h3>
+{% for review in Review %}
+<a href="/books/{{review.book.id}}">{{review.book.title}}</a>
+<br>
+<br>
+{% endfor %}
+
+
+
+<br>
+<br>
+<br>
+<br>
+<form action="/books/show" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Return">
+</form>

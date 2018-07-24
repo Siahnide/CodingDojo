@@ -1,0 +1,97 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'rpg/css/singleplayer_menu.css' %}">
+</head>
+<body>
+    <div id="container">
+        <form action="/game/level/1" method="POST" id="level">
+            {% csrf_token %}
+            <input type="submit"  value="Desert &nbsp;&nbsp;&nbsp;-Easy">
+        </form>
+        <form action="/game/level/2" method="POST" id="level">
+            {% csrf_token %}
+            <input type="submit"  value="Plains &nbsp;&nbsp;&nbsp;-Easy">
+        </form>
+        <form action="/game/level/3" method="POST" id="level">
+            {% csrf_token %}
+            <input type="submit"  value="Jungle &nbsp;&nbsp;&nbsp;-Medium">
+        </form>
+        <form action="/game/level/4" method="POST" id="level">
+            {% csrf_token %}
+            <input type="submit"  value="Mountain &nbsp;&nbsp;&nbsp;-Hard">
+        </form>
+
+    </div>
+    <div id="current">
+        Current Character : {{active.name}} <hr>
+        
+            <div id="items">
+                <div id="item">HP</div>
+                <div id='item'>{{active.hp}}</div>
+            </div>    
+            <div id="items">
+                <div id="item">Ac</div>
+                <div id='item'>{{active.ac}}</div>
+            </div>    
+            <div id="items">
+                <div id="item">Atk</div>
+                <div id='item'>{{active.atk}}</div>
+            </div>    
+            <div id="items">
+                <div id="item">Dmg</div>
+                <div id='item'>{{active.dmg}}</div>
+            </div>    
+            <div id="items">
+                <div id="item">Speed</div>
+                <div id='item'>{{active.sp}}</div>
+            </div>    
+            <div id="items">
+                <div id="item">Range</div>
+                <div id='item'>{{active.ranged}}</div>
+            </div>    
+    
+            <hr>
+            <div id="items">
+                Equipment:
+                <div id="item">{{active.head_item.slot}}:</div>
+                <div id='item'>{{active.chest_item.slot}}:</div>
+                <div id='item'>{{active.arms_item.slot}}:</div>
+                <div id='item'>{{active.feet_item.slot}}:</div>
+                <div id='item'>{{active.left_hand_item.slot}}:</div>
+                <div id='item'>{{active.right_hand_item.slot}}:</div>
+            </div>
+            <div id="items">
+            </div>
+            <div id="items">
+                <div id="item"></div>
+                <div id="item">{{active.head_item.name}}</div>
+                <div id='item'>{{active.chest_item.name}}</div>
+                <div id='item'>{{active.arms_item.name}}</div>
+                <div id='item'>{{active.feet_item.name}}</div>
+                <div id='item'>{{active.left_hand_item.name}}</div>
+                <div id='item'>{{active.right_hand_item.name}}</div>
+                
+            </div>
+        
+
+            <hr>
+    </div>
+<form action="/" method="POST">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="back">
+</form>
+
+
+
+<form action="/create_char" method="GET">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Create a new Character">
+</form>
+<form action="/load_char" method="GET">
+    {% csrf_token %}
+    <input type="submit" id="submit" value="Load Character">
+</form>
+
+
+
+</body>

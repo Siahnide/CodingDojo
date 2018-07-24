@@ -1,0 +1,11 @@
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\bin\Debug\netcoreapp2.0\Lost.deps.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\bin\Debug\netcoreapp2.0\Lost.runtimeconfig.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\bin\Debug\netcoreapp2.0\Lost.runtimeconfig.dev.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\bin\Debug\netcoreapp2.0\Lost.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\bin\Debug\netcoreapp2.0\Lost.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\obj\Debug\netcoreapp2.0\Lost.csproj.CoreCompileInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\obj\Debug\netcoreapp2.0\Lost.AssemblyInfoInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\obj\Debug\netcoreapp2.0\Lost.AssemblyInfo.cs
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\obj\Debug\netcoreapp2.0\Lost.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\obj\Debug\netcoreapp2.0\Lost.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\DojoAssignments\C#_netCore\ORMS\Lost in the Woods\Lost\obj\Debug\netcoreapp2.0\Lost.csprojResolveAssemblyReference.cache

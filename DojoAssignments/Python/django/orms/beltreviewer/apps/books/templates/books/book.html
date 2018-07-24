@@ -1,0 +1,41 @@
+<form action="/books/show" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Return">
+</form>
+
+<h1>{{Book.title}}</h1>
+<h4>Author: {{Book.author.name}}</h4>
+<h2>Reviews</h2>
+
+
+
+{% for x in Review %}
+<hr>
+Rating: {{x.rating}}<br>
+<a href="/books/user/{{x.creator}}">{{x.creator}}</a> says: {{x.content}}<br>
+<br>
+Posted On {{x.created_at}}
+
+{% endfor %}
+
+<br>
+<br>
+<br>
+<br>
+
+<form action="/books/review/{{Book.id}}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="title" value="{{Book.title}}">
+    <h4 id="block">Add a Review:</h4> <textarea name="content"></textarea>
+    <h4 id="block">Rating:</h4>
+    <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        
+    </select>
+    <input type="submit" id="submit" value="Add aReview">
+</form>
+

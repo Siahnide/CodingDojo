@@ -1,0 +1,19 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'rpg/css/menu.css' %}">
+</head>
+
+<body>
+    <div id="container">
+        <div id="Title">
+            <h1>The game</h1>
+        </div>
+        <br>
+        <form action="/single" method="POST">
+            {% csrf_token %}
+            <input type="submit" id="game" value="Singleplayer">
+        </form>
+    </div>
+
+<div id="me">Creator: Josiah Savage</div>
+</body>

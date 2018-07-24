@@ -1,0 +1,21 @@
+<head>
+<link rel="stylesheet" type="text/css" href="~/css/main.css">
+
+</head>
+
+@model ViewModel
+<h2>Name:@Model.newninja.name</h2>
+<p>Ninja level - @Model.newninja.level</p>
+@{
+    if(Model.newninja.description.Length > 0)
+    {
+        <p>Description:@Model.newninja.description</p>
+    }
+}
+
+<p>Current Dojo:@Model.newdojo.name
+    
+</p>
+
+<a id="floater" href="/ninjas">Ninjas</a>
+<a id="floater2" href="/ninjas">Dojos</a>

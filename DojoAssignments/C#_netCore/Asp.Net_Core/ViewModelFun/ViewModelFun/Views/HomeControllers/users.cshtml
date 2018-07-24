@@ -1,0 +1,10 @@
+<h1>Here are some dudes!</h1>
+@model ViewModelFun.Models.users
+
+@{
+    foreach (var item in Model.people)
+    {
+        <p>@item.FirstName @item.LastName</p>
+        
+    }
+}

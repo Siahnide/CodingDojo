@@ -1,0 +1,61 @@
+1st. 25% chance. 1-7 spells. 34 total.
+2nd. 20%. 2+(0-2 1st level). 41.
+3rd. 20%. 2+(0-1 2nd & 0-1 1st). 35.
+4th. 15%. 1-2+(0-1 lower level). 27.
+5th. 10%. 1-2+(0-1 lower level). 36.
+6th. 5%. 1-2. 24.
+7th. 3%. 1. 22.
+8th. 2%. 0-1. 16.
+9th. 1%. 0-1. 12.
+
+
+
+                for(var i =0;i<count;i++){
+                    spells_id.push(Math.floor((Math.random() * 34) + 1))
+                }
+
+                for(var i =0;i<count1;i++){
+                    spells_id.push(Math.floor((Math.random() * 34) + 1))
+                }
+                for(var i =0;i<count2;i++){
+                    spells_id.push(Math.floor((Math.random() * 41) + 1))
+                }
+
+for(var i =0;i<count1;i++){
+                    spells_id.push(Math.floor((Math.random() * 34) + 1))
+                }
+                for(var i =0;i<count2;i++){
+                    spells_id.push(Math.floor((Math.random() * 41) + 1))
+                }
+                for(var i =0;i<count3;i++){
+                    spells_id.push(Math.floor((Math.random() * 35) + 1))
+                }
+for(var i =0;i<count1;i++){
+                    spells_id.push(Math.floor((Math.random() * 34) + 1))
+                }
+                for(var i =0;i<count2;i++){
+                    spells_id.push(Math.floor((Math.random() * 27) + 1))
+                }
+if(level==1){
+                    for(var i =0;i<count1;i++){
+                        spells_id.push(Math.floor((Math.random() * 34) + 1))
+                    }   
+                }
+                if(level==2){
+                    for(var i =0;i<count1;i++){
+                        spells_id.push(Math.floor((Math.random() * 41) + 1))
+                    }   
+                }
+                if(level==3){
+                    for(var i =0;i<count1;i++){
+                        spells_id.push(Math.floor((Math.random() * 35) + 1))
+                    }   
+                }
+                if(level==4){
+                    for(var i =0;i<count1;i++){
+                        spells_id.push(Math.floor((Math.random() * 27) + 1))
+                    }   
+                }
+                for(var i =0;i<count2;i++){
+                    spells_id.push(Math.floor((Math.random() * 27) + 1))
+                }

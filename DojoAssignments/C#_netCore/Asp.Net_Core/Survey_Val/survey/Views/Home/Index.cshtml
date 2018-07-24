@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+@model User
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
+
+</head>
+<body>
+    <form asp-action="Create" asp-controller="Home" method="post">
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name">
+        First Name: <input asp-for="Name">
+        <span asp-validation-for="Location"></span>
+        <label asp-for="Location">
+        Location:<input asp-for="Location">
+        <span asp-validation-for="Language"></span>
+        <label asp-for="Language">
+        Favorite Language:<input asp-for="Language">
+        <span asp-validation-for="Comment"></span>
+        <label asp-for="Comment">
+        Comment:<br><textarea asp-for="Comment"></textarea>
+        <input value="Add User" type="submit">
+
+        
+    
+</label></label></label></label></form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<head>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'rpg/css/singleplayer_menu.css' %}">
+</head>
+
+<h3>Name:</h3>
+
+<form action="/create_char" method="POST" id="current">
+    {% csrf_token %}
+    <input type="text" name="name"><br>
+    <input type="submit" id="submit" value="Create Character">
+    
+    
+    
+    
+    {% for y in item %}
+    <br>
+    
+    <input type="hidden" name="{{y.0.slot}}" value="none">
+    {% endfor %}
+    <br>
+    
+</form>

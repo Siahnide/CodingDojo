@@ -1,0 +1,105 @@
+*{
+    text-align:left;
+
+}
+
+body{
+    background:black;
+}
+#container{
+    background:grey;
+    display:inline-block;
+    width:240px;
+    height:400px;
+    padding:20px;
+    border-radius:15px;
+}
+#level{
+    width:240px;
+    height:70px;
+    color:black;
+    background:whitesmoke;
+    border:black 1px solid;
+    border-radius: 15px;
+    vertical-align:middle;
+    margin-top:20px;
+    
+}
+    #level input{
+        font-family: 'Papyrus', 'Arial Narrow', Arial, sans-serif;
+        font-size:24px;
+        background:transparent;
+        width:100%;
+        height:100%;
+        border-radius: 15px;
+        
+    }
+
+#submit{
+    overflow: hidden;
+    margin-top:5px;
+    width: 200px;
+    height: 25px;
+    color:whitesmoke;
+    font-family: 'Papyrus', 'Arial Narrow', Arial, sans-serif;
+    background: transparent;
+    box-shadow: 3px 5px black;
+    border: 3px black solid;
+}
+#current{
+    vertical-align: top;
+    display:inline-block;
+    color:white;
+    font-family: 'Papyrus', 'Arial Narrow', Arial, sans-serif;
+    
+    
+}
+h3{
+    color:white;
+    font-family: 'Papyrus', 'Arial Narrow', Arial, sans-serif;
+}
+
+#submit_two{
+    overflow: hidden;
+    margin-top:5px;
+    width: 130px;
+    height: 25px;
+    color:black;
+    font-family: 'Papyrus', 'Arial Narrow', Arial, sans-serif;
+    background: whitesmoke;
+    border-radius:10px;
+    box-shadow: 3px 5px black;
+    border: 3px black solid;
+}
+
+#items{
+    display:inline-block;
+    
+    text-align: center;
+    margin-right:2px;
+    vertical-align: top;
+    
+}
+#submit_three{
+    display:inline-block;
+    overflow: hidden;
+    margin:0px;
+    padding:0px;
+    width: 200px;
+    height: 25px;
+    color:whitesmoke;
+    font-family: 'Papyrus', 'Arial Narrow', Arial, sans-serif;
+    background: transparent;
+    box-shadow: 3px 5px black;
+    border: 0px black solid;
+    vertical-align: top;
+}
+#items #item{
+    height:20px;
+    width:100%;
+    text-align: center;
+    border:.25px black solid;
+    vertical-align: top;
+    }
+
+    

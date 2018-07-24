@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' type='text/css' href='~/css/main.css'>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.10.2.js'></script> 
+</head>
+<script>
+(document).ready(function(){
+
+});
+</script>
+<body>
+
+</body>
+</html>
+
+<div id="header"><h1>Lost in the Woods</h1> List of local hiking trails</div>
+
+<a id="floater" href="form">Create A trail!</a>
+
+<div id="itemz">
+    <div id="item">Trail Name</div>
+    @{
+        foreach(var x in ViewBag.trails)
+        {
+        <div id='item'>
+            <form action="single" method="post">
+            <input type="hidden" value="@x["id"]" name="id"> 
+            <input type="submit" id="submit" value="@x["name"]">
+            </form>
+        </div>
+            
+        }
+    }
+</div>
+<div id="items">
+    <div id="item">Trail Length</div>
+    @{
+        foreach(var x in ViewBag.trails)
+        {
+        <div id='item'>@x["length"]</div>
+            
+        }
+    }
+</div>
+<div id="items">
+    <div id="item">Elevation Change</div>
+    @{
+        foreach(var x in ViewBag.trails)
+        {
+        <div id='item'>@x["elevation"]</div>
+            
+        }
+    }
+</div>

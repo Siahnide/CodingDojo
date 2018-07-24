@@ -1,0 +1,43 @@
+#items{
+    display:inline-block;
+    width:150px;
+    text-align: center;
+    margin-right:-3px;
+    vertical-align: bottom;
+
+}
+    #items #item{
+        height:40px;
+        width:100%;
+        text-align: center;
+        border:.25px black solid;
+        vertical-align: bottom;
+    }
+#left{
+    display:inline-block;
+    width:40%;
+    vertical-align: top;
+}
+#right{
+    display:inline-block;
+    width:40%;
+    vertical-align: top;
+}
+
+#link{
+    background: transparent;
+    text-decoration: blue solid underline;
+    border:none;
+    color:blue;
+}
+
+#floater{
+    position:absolute;
+    top:10px;
+    right:20px;
+}
+#floater2{
+    position:absolute;
+    top:30px;
+    right:20px;
+}

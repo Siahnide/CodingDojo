@@ -1,0 +1,46 @@
+@model ViewModel
+<!DOCTYPE html>
+<html>
+
+<link rel='stylesheet' type='text/css' href='~/css/main.css'>
+<body>
+
+<div id="left">
+    <h1>All Dojos</h1>
+    <div id="items">
+        <div id="item">Dojo Name</div>
+        @{
+            foreach(Dojo x in Model.Dojos)
+            {
+                <div id="item"><a href="dojo/@x.id">@x.name</a></div>
+
+            }
+        }
+
+    </div>
+
+</div>
+<div id="right">
+    <h1>Register A Dojo</h1>
+    <form asp-action='CreateDojo' asp-controller='Home' method='post'>
+        <div id='form_group'>
+            <span asp-validation-for='newdojo.name'></span>
+            <label asp-for='newdojo.name'></label>
+            <input asp-for='newdojo.name'>
+        </div>
+        <div id='form_group'>
+            <span asp-validation-for='newdojo.location'></span>
+            <label asp-for='newdojo.location'></label>
+            <input asp-for='newdojo.location'>
+        </div>
+        
+        <div id='form_group'>
+            <span asp-validation-for='newdojo.info'></span>
+            <label asp-for='newdojo.info'></label>
+            <input asp-for='newdojo.info'>
+        </div>
+        <input type='submit' value='submit'>
+    </form>
+</div>
+</body>
+</html>

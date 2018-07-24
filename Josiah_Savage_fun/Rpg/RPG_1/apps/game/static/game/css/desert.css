@@ -1,0 +1,137 @@
+body{
+    margin:0px;
+    background:rgb(56, 56, 56);
+}
+#submit{
+    display:inline-block;
+    overflow: hidden;
+    margin:0px;
+    padding:0px;
+    width: 200px;
+    height: 25px;
+    color:whitesmoke;
+    font-family: 'Papyrus', 'Arial Narrow', Arial, sans-serif;
+    background: transparent;
+    
+    border: 0px black solid;
+    vertical-align: top;
+}
+#map{
+    
+    display:inline-block;
+    height:592px;
+    width:740px;
+    margin-left:111px;
+    
+}
+
+#map #row{
+    display:inline-block;
+    margin-left:-37px;
+    
+    height:37px;
+    width:777px;
+    
+    
+    
+}
+
+#horizontal{
+    vertical-align: top;
+    display:inline-block;
+    height: 592px;
+    width:200px;
+    
+    
+    font-family: "Papyrus", Helvetica, sans-serif;
+
+}
+#horizontal h1{
+    display:inline-block;
+}
+    #block{
+        font-size: 14px;
+        margin-top:10px;
+        font-family: "Papyrus", Helvetica, sans-serif;
+        display:inline-block;   
+        color:whitesmoke;
+        padding:1%;
+        background:rgb(129, 129, 129);
+        width:180px;
+        height:130px;
+        vertical-align: top;
+        margin:1%
+
+    }
+
+
+#sand{
+    margin: 0px;
+    display:inline-block;
+    width:35px;
+    height:35px;
+    border: rgb(182, 174, 92) 1px solid;
+    background:url("../img/map/sand.png");
+}
+
+#wall{
+    margin:0px;
+    display:inline-block;
+    width:35px;
+    height:35px;
+    border: rgb(31, 31, 31) 1px solid;
+    background:url("../img/map/bedrock.png");
+}
+#stonebrick{
+    margin:0px;
+    display:inline-block;
+    width:35px;
+    height:35px;
+    border: rgb(31, 31, 31) 1px solid;
+    background:url("../img/map/stonebrick.png");
+}
+#coal{
+    margin:0px;
+    display:inline-block;
+    width:35px;
+    height:35px;
+    border: rgb(31, 31, 31) 1px solid;
+    background:url("../img/map/coal.png");
+}
+
+
+
+/* Character Imaging */
+
+#char{
+    background:transparent url("../img/char/base.png");
+    position: absolute;
+    
+    width:36px;
+    height:36px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\bin\Debug\netcoreapp2.0\Elements.deps.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\bin\Debug\netcoreapp2.0\Elements.runtimeconfig.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\bin\Debug\netcoreapp2.0\Elements.runtimeconfig.dev.json
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\bin\Debug\netcoreapp2.0\Elements.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\bin\Debug\netcoreapp2.0\Elements.pdb
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\obj\Debug\netcoreapp2.0\Elements.csprojResolveAssemblyReference.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\obj\Debug\netcoreapp2.0\Elements.csproj.CoreCompileInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\obj\Debug\netcoreapp2.0\Elements.AssemblyInfoInputs.cache
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\obj\Debug\netcoreapp2.0\Elements.AssemblyInfo.cs
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\obj\Debug\netcoreapp2.0\Elements.dll
+C:\Users\Josiah Savage\Desktop\Coding Dojo\Josiah_Savage_fun\C#_RPG\Elements\obj\Debug\netcoreapp2.0\Elements.pdb

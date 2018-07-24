@@ -1,0 +1,38 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/deployment
+ExecStart=/home/ubuntu/deployment/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/deployment/courses.sock courses.wsgi:application
+[Install]
+WantedBy=multi-user.target
+
+
+server {
+  listen 80;
+  server_name 172-31-29-87;
+  location = /favicon.ico { access_log off; log_not_found off; }
+  location /static/ {
+      root /home/ubuntu/deployment;
+  }
+  location / {
+      include proxy_params;
+      proxy_pass http://unix:/home/ubuntu/deployment/courses.sock;
+  }
+}
+
+sudo ln -s /etc/nginx/sites-available/courses /etc/nginx/sites-enabled
+server {
+  listen 80;
+  server_name 52.15.199.93;
+  location = /favicon.ico { access_log off; log_not_found off; }
+  location /static/ {
+      root /home/ubuntu/deployment;
+  }
+  location / {
+      include proxy_params;
+      proxy_pass http://unix:/home/ubuntu/deployment/courses.sock;
+  }
+}

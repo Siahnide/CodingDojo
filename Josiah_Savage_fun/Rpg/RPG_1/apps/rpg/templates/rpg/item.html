@@ -1,0 +1,29 @@
+<form action="/add_item" method="POST">
+    {% csrf_token %}
+    Name:<input type="text" name="name"><br>
+    hp:<input type="text" name="hp"><br>
+    ac:<input type="text" name="ac"><br>
+    dmg:<input type="text" name="dmg"><br>
+    atk:<input type="text" name="atk"><br>
+    sp:<input type="text" name="sp"><br>
+    ranged:<input type="text" name="ranged"><br>
+    slot:<input type="text" name="slot"><br>
+    <input type="submit" id="submit">
+</form>
+
+
+{%for x in Item%}
+<hr>
+{{x.name}}<br>
+{{x.slot}}
+<br>HP:{{x.hp}}
+<br>ac:{{x.ac}}
+<br>atk:{{x.atk}}
+<br>dmg:{{x.dmg}}
+<br>char_sp:{{x.sp}}
+<br>ranged:{{x.ranged}}
+<form action="/equip/{{x.id}}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="equip">
+</form>
+{% endfor %}
